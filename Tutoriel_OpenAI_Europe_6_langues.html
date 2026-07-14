@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chargement du tutoriel OpenAI complet</title>
+<style>
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f3f5f7;color:#172026}main{min-height:100%;display:grid;place-items:center;padding:24px;box-sizing:border-box}.card{width:min(680px,100%);background:#fff;border:1px solid #dbe1e5;border-radius:18px;padding:28px;box-shadow:0 12px 35px rgba(24,36,42,.1)}h1{font-size:1.45rem;margin:0 0 12px}p{line-height:1.55;margin:8px 0}.status{color:#59646d}.error{color:#9b2c2c;white-space:pre-wrap}
+</style>
+</head>
+<body>
+<main><section class="card"><h1>Chargement de la version complète…</h1><p>Reconstitution et vérification du tutoriel original en six langues.</p><p id="status" class="status" aria-live="polite">Préparation des fichiers.</p></section></main>
+<script>
+(async()=>{
+  const status=document.getElementById('status');
+  const version='original-f8427892-20260714';
+  const expected='f842789242721b5be6a93a34f34ca3f97ebfb5598edd51b038e6468bb04513af';
+  const parts=[
+    ['payload/original-001.txt','text'],['payload/original-002.txt','text'],['payload/original-003.txt','text'],
+    ['payload/original-004.txt','text'],['payload/original-005.txt','text'],['payload/original-006.txt','text'],
+    ['payload/original-007.txt','text'],['payload/original-008.txt','text'],['payload/original-009.txt','text'],
+    ['payload/original-010.txt','text'],['payload/original-011.txt','text'],['payload/original-012.txt','text'],
+    ['payload/original-013.txt','text'],['payload/original-014.txt','text'],['payload/original-015.txt','text'],
+    ['payload/original-016.txt','text'],['payload/original-017.txt','text'],['payload/original-018.txt','text'],
+    ['payload/original-019.txt','text'],['payload/original-020a.txt','text'],['payload/original-020b.txt','text'],
+    ['payload/original-021.txt','text'],['payload/original-022a.txt','text'],['payload/original-022b.txt','text'],
+    ['payload/original-023a.txt','text'],['payload/original-023b1.txt','text'],['payload/original-023b2.b64','base64'],
+    ['payload/original-024a.txt','text'],['payload/original-024b.txt','text'],['payload/original-024c.txt','text'],
+    ['payload/original-024d.txt','text'],['payload/original-025a.txt','text'],['payload/original-025b.txt','text'],
+    ['payload/original-025c.txt','text'],['payload/original-025d.txt','text'],['payload/original-026.txt','text']
+  ];
+  function decodeBase64Utf8(value){
+    const binary=atob(value.replace(/\s+/g,''));
+    const bytes=new Uint8Array(binary.length);
+    for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
+    return new TextDecoder('utf-8').decode(bytes);
+  }
+  try{
+    const chunks=[];
+    for(let i=0;i<parts.length;i++){
+      status.textContent=`Chargement ${i+1}/${parts.length}…`;
+      const [file,encoding]=parts[i];
+      const response=await fetch(`${file}?v=${version}`,{cache:'no-store'});
+      if(!response.ok)throw new Error(`Fichier manquant : ${file} (${response.status})`);
+      const value=await response.text();
+      chunks.push(encoding==='base64'?decodeBase64Utf8(value):value);
+    }
+    status.textContent='Vérification de l’intégrité…';
+    const html=chunks.join('');
+    const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(html));
+    const actual=[...new Uint8Array(digest)].map(b=>b.toString(16).padStart(2,'0')).join('');
+    if(actual!==expected)throw new Error(`Échec du contrôle d’intégrité.\nAttendu : ${expected}\nObtenu : ${actual}`);
+    document.open();
+    document.write(html);
+    document.close();
+  }catch(error){
+    status.className='error';
+    status.textContent=error instanceof Error?error.message:String(error);
+  }
+})();
+</script>
+</body>
+</html>
