@@ -1,0 +1,76 @@
+mis</th></tr></thead><tbody>
+    <tr><td>Instant / implicit</td><td>Întrebări simple, reformulare, rezumate și explorare inițială.</td><td>Cel mai rapid, dar mai puțin potrivit pentru decizii cu multe constrângeri.</td></tr>
+    <tr><td>Medium</td><td>Comparații, recomandări structurate și analiză moderată.</td><td>Mai mult timp și consum decât Instant.</td></tr>
+    <tr><td>High</td><td>Decizii complexe, analiză aprofundată a documentelor și planificare exigentă.</td><td>Mai lent; necesită în continuare verificare umană.</td></tr>
+    <tr><td>Extra High</td><td>Raționament cu efort maxim pe planurile eligibile.</td><td>Depinde de plan și consumă cele mai multe resurse.</td></tr>
+  </tbody></table></div>
+  <div class="callout"><strong>Metodă recomandată</strong>Folosiți Instant pentru orientare, Medium sau High pentru decizie, apoi solicitați o analiză contradictorie. Un nivel mai înalt nu elimină verificarea surselor, cifrelor și ipotezelor.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">7. Tutorial Chat — o recomandare fiabilă</h2>
+  <div class="steps">
+    <div class="step">Deschideți Chat pe web, mobil sau în aplicația desktop unificată.</div>
+    <div class="step">Atașați sursele aprobate și precizați ce surse externe sunt permise.</div>
+    <div class="step">Solicitați mai întâi o grilă comparativă.</div>
+    <div class="step">Cereți separarea faptelor, ipotezelor și judecăților.</div>
+    <div class="step">Lansați o a doua analiză care încearcă să invalideze prima concluzie.</div>
+    <div class="step">Verificați cifrele și citările critice înainte de reutilizare.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Prompt principal</div><pre>Atașez trei oferte de furnizori. Compară-le după cost total, termen, risc contractual, reversibilitate, cerințe de securitate și costuri ascunse. Citează sursa pentru fiecare afirmație importantă. Încheie cu o recomandare, nivelul de încredere și informațiile lipsă care ar putea schimba decizia. Separă faptele, ipotezele și judecățile.</pre></div>
+  <div class="prompt"><div class="prompt-title">Control contradictoriu</div><pre>Acționează ca evaluator critic. Identifică cele mai slabe trei puncte ale recomandării, construiește un scenariu plauzibil în care o altă opțiune devine preferabilă și enumeră verificările umane necesare înainte de aprobare.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">8. Directorul de pluginuri și fluxurile reutilizabile</h2>
+  <p>Directorul de pluginuri înlocuiește Directorul de aplicații ca punct de descoperire a fluxurilor reutilizabile în ChatGPT și Codex. Un plugin poate combina Skills, aplicații conectate și șabloane. Conexiunile existente nu sunt eliminate automat.</p>
+  <div class="steps">
+    <div class="step">Deschideți Plugins din bara laterală sau din Settings &gt; Plugins.</div>
+    <div class="step">Citiți capabilitățile, accesul la date, conexiunile necesare și restricțiile administrative.</div>
+    <div class="step">Conectați numai serviciile indispensabile.</div>
+    <div class="step">Invocați pluginul prin mențiune @ sau meniul +, în funcție de interfață.</div>
+    <div class="step">Solicitați aprobare explicită înainte de trimitere, publicare, ștergere sau modificare externă.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Exemplu cu un plugin de mesagerie</div><pre>@Slack, găsește mesajele din canalul proiectului începând de luni. Rezumă numai deciziile, blocajele, responsabilii și datele. Citează mesajele sursă. Nu publica și nu modifica nimic în Slack fără aprobarea mea explicită.</pre></div>
+  <div class="callout"><strong>Skill versus plugin</strong>Un Skill conține instrucțiuni, exemple și uneori cod pentru un flux consecvent. Un plugin este un pachet mai larg care poate include mai multe Skills, aplicații și șabloane.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">9. WhatsApp, Voice, chat-uri de grup și Atlas</h2>
+  <h3>WhatsApp în SEE</h3>
+  <p>Din 13 iulie, ChatGPT revine progresiv pe WhatsApp în SEE prin contactul verificat 1-800-CHATGPT (+1-800-242-8478). Sunt acceptate textul, imaginile, notele vocale și cererile de generare de imagini. Asocierea unui cont ChatGPT este opțională și poate crește limitele.</p>
+  <div class="prompt"><div class="prompt-title">Exemplu WhatsApp</div><pre>Aceasta este o fotografie a tablei de la ședință. Transcrie deciziile, grupează acțiunile după responsabil și redactează un mesaj de urmărire sub 120 de cuvinte. Marchează zonele ilizibile în loc să ghicești.</pre></div>
+  <h3>Alte schimbări Chat</h3>
+  <ul>
+    <li><strong>GPT-Live-1 Voice:</strong> întreruperi mai bune și dialog mai natural pentru planurile de consum eligibile. Nu se lansează în Work, Codex, Business, Enterprise sau Edu și nu include video ori partajare de ecran.</li>
+    <li><strong>Chat-uri de grup:</strong> după 9 iulie nu mai pot fi create, convertite sau accesate chat-uri noi. Cele existente continuă temporar și pot deveni doar pentru citire.</li>
+    <li><strong>Atlas:</strong> retragerea este programată pentru 9 august 2026. Marcajele, filele și istoricul browserului nu migrează automat.</li>
+  </ul>
+</section>
+
+<div class="part"><div class="roman">II</div><h2>ChatGPT Work</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">10. Ce este Work și unde rulează</h2>
+  <p class="lead">ChatGPT Work este conceput pentru sarcini lungi și structurate care se încheie cu un livrabil utilizabil: cercetare, analiză, documente, foi de calcul, prezentări și rapoarte.</p>
+  <div class="table-wrap"><table><thead><tr><th>Interfață</th><th>Execuție</th><th>Acces</th><th>Limită principală</th></tr></thead><tbody>
+    <tr><td>Web / mobil</td><td>Cloud</td><td>Fișiere atașate, proiecte și aplicații conectate.</td><td>Fără acces direct la fișierele calculatorului.</td></tr>
+    <tr><td>Work desktop</td><td>Local plus servicii autorizate</td><td>Foldere locale, fișiere, aplicații desktop și context de browser integrat.</td><td>Thread-urile locale Work și fișierele rămân pe acel computer la lansare.</td></tr>
+    <tr><td>Sarcini programate</td><td>Cloud</td><td>Sarcini unice, recurente sau de monitorizare.</td><td>Se gestionează din pagina Scheduled pe web/mobil, nu din Work desktop.</td></tr>
+  </tbody></table></div>
+  <div class="callout warning"><strong>Separarea cloud/local</strong>Conversațiile Work din cloud nu apar în Work desktop la lansare, iar thread-urile desktop nu se sincronizează automat în cloud. Alegeți interfața înaintea unui proiect lung.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">11. Crearea documentelor, foilor de calcul și prezentărilor</h2>
+  <div class="steps">
+    <div class="step">Descrieți fișierul final, publicul și decizia pe care o susține.</div>
+    <div class="step">Atașați sursele aprobate sau conectați numai aplicația necesară.</div>
+    <div class="step">Precizați formatul de ieșire și destinația.</div>
+    <div class="step">Indicați ce nu trebuie schimbat: formule, structură, identitate vizuală, ton, ordinea foilor sau a slide-urilor.</div>
+    <div class="step">Solicitați trasabilitatea surselor și controale de calitate.</div>
+    <div class="step">Revizuiți și aprobați înainte de distribuire.</div>
+  </div>
+  <p>Work poate crea sau modifica Google Docs, Sheets și Slides dacă aplicația Google Workspace corespunzătoare este activată. Pe desktop, Excel poate fi deschis direct prin Codex și add-in-ul ChatGPT for Excel. PowerPoint nu face parte din fluxul Work desktop la lansare.</p>
+  <div class="prompt"><div class="prompt-title">Raport executiv</div><pre>Pe baza registrului de vânzări, exportului de pipeline și comentariilor echipei, creează un raport executiv de șase pagini. Include rezumat, KPI, abatere față de buget, cauze, riscuri, decizii necesare și plan de acțiune. Păstrează formulele, citează sursa fiecărui număr important și adaugă o anexă metodologică.</pre></div>
+  <div class="prompt"><div class="prompt-title">Prezentare</di
