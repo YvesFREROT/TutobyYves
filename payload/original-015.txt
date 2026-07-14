@@ -1,0 +1,69 @@
+ystkich europejskich jurysdykcjach w chwili startu.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">3. Wybór właściwego środowiska</h2>
+  <div class="table-wrap"><table><thead><tr><th>Środowisko</th><th>Główne zastosowanie</th><th>Typowy kontekst</th><th>Przykład</th></tr></thead><tbody>
+    <tr><td><strong>Chat</strong></td><td>Pytania, research, pomysły, redagowanie i szybka analiza.</td><td>Historia rozmów, załączniki, wyszukiwanie w sieci, pamięć według ustawień i wtyczki, jeśli są dostępne.</td><td>Porównanie trzech ofert handlowych i przygotowanie rekomendacji.</td></tr>
+    <tr><td><strong>Work</strong></td><td>Długi research, analiza strukturalna i gotowe materiały.</td><td>Chmura w web/mobile; lokalne pliki i autoryzowane aplikacje desktop; zadania zaplanowane.</td><td>Przekształcenie danych miesięcznych w raport, sprawdzony arkusz i prezentację.</td></tr>
+    <tr><td><strong>Codex</strong></td><td>Zmiany kodu, review, testy, terminale i repozytoria.</td><td>Lokalne foldery, Git, IDE, GitHub, Computer Use, Remote i wtyczki techniczne.</td><td>Naprawa regresji w kilku repozytoriach i przygotowanie pull requestu.</td></tr>
+  </tbody></table></div>
+  <div class="callout"><strong>Szybka zasada</strong>Jeżeli wynikiem ma być głównie odpowiedź, zacznij od Chat. Jeżeli ma powstać plik biznesowy lub powtarzalny proces, wybierz Work. Jeżeli potrzebne są repozytorium, terminal albo diff, wybierz Codex.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">4. Dostępność w Europie na 14 lipca 2026 r.</h2>
+  <div class="table-wrap"><table><thead><tr><th>Funkcja</th><th>Data oficjalna</th><th>Sytuacja w Europie</th><th>Plany / powierzchnie</th><th>Ważna uwaga</th></tr></thead><tbody>
+    <tr><td>GPT-5.6 Sol w Chat</td><td>9 lipca</td><td>Stopniowe wdrażanie w obsługiwanych lokalizacjach europejskich, w tym w EOG.</td><td>Uprawnione plany płatne; poziom zależy od planu.</td><td>Funkcja może jeszcze nie być widoczna na każdym koncie.</td></tr>
+    <tr><td>ChatGPT Work</td><td>9 lipca</td><td>Stopniowe wdrażanie w obsługiwanych regionach.</td><td>Plany płatne poza Free/Go; web, mobile i desktop.</td><td>Najpierw Pro, Pro Lite, Enterprise i Edu; później Plus i Business.</td></tr>
+    <tr><td>Zunifikowana aplikacja desktop</td><td>9 lipca</td><td>Stopniowa dostępność globalna.</td><td>macOS i Windows.</td><td>Może przejściowo współistnieć z ChatGPT Classic.</td></tr>
+    <tr><td>Katalog wtyczek</td><td>9 lipca</td><td>Dostępny zależnie od planu, roli i reguł regionalnych aplikacji bazowej.</td><td>Wszystkie plany, różny zakres możliwości.</td><td>Wtyczka może zależeć od usługi niedostępnej w danym kraju.</td></tr>
+    <tr><td>ChatGPT w WhatsApp</td><td>13 lipca</td><td>Stopniowy powrót w EOG.</td><td>Numery WhatsApp z kwalifikującym się kodem kraju.</td><td>Obowiązują kod kraju, limity użycia i etapowa aktywacja.</td></tr>
+    <tr><td>ChatGPT Sites</td><td>9 lipca</td><td>Publiczne publikowanie / rozszerzone wdrożenie niedostępne w EOG przy starcie; Wielką Brytanię i Szwajcarię należy sprawdzić osobno.</td><td>Uprawnione plany płatne w otwartych regionach.</td><td>Nie uzależniaj procesu europejskiego od Sites bez potwierdzenia kraju.</td></tr>
+    <tr><td>Codex w aplikacji desktop</td><td>9 lipca</td><td>Dostępny w Europie.</td><td>Uwzględniony w planach z różnymi limitami.</td><td>Codex nie jest wybieralnym trybem w web/mobile; obsługiwane zadania zdalne można śledzić na telefonie.</td></tr>
+    <tr><td>Record &amp; Replay</td><td>Bieżąca dokumentacja</td><td>Początkowo niedostępne w UE, Wielkiej Brytanii i Szwajcarii.</td><td>Uprawnieni użytkownicy Codex na macOS; wymaga Computer Use.</td><td>Przed szkoleniem sprawdź aktualny status regionalny.</td></tr>
+    <tr><td>GPT-Live-1 Voice</td><td>8 lipca</td><td>Stopniowe wdrażanie konsumenckie na uprawnionych kontach europejskich.</td><td>Web/mobile dla użytkowników indywidualnych.</td><td>Przy starcie brak w Work, Codex, Business, Enterprise i Edu; bez wideo i udostępniania ekranu.</td></tr>
+  </tbody></table></div>
+  <div class="callout warning"><strong>Europa nie oznacza jednego zestawu uprawnień</strong>Zawsze sprawdź kraj, plan, rolę w obszarze roboczym, wersję klienta i ustawienia administratora na rzeczywistym koncie.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">5. Oś czasu</h2>
+  <div class="table-wrap"><table><thead><tr><th>Data</th><th>Środowisko</th><th>Aktualizacja</th></tr></thead><tbody>
+    <tr><td>8 lipca</td><td>Chat</td><td>Rozpoczyna się wdrażanie GPT-Live-1 dla konsumenckiego Voice.</td></tr>
+    <tr><td>9 lipca</td><td>Chat</td><td>GPT-5.6, Katalog wtyczek, zakończenie tworzenia nowych czatów grupowych i zapowiedź wycofania Atlas.</td></tr>
+    <tr><td>9 lipca</td><td>Work</td><td>Ogłoszenie ChatGPT Work, długich zadań i zunifikowanej aplikacji desktop.</td></tr>
+    <tr><td>9 lipca</td><td>Codex</td><td>Codex trafia do aplikacji desktop z bezpośrednią edycją, adnotacjami, review PR i pracą wielorepozytoryjną.</td></tr>
+    <tr><td>Od 10 lipca</td><td>Europa</td><td>Prawdopodobne okno widoczności etapowych wdrożeń ogłoszonych 9 lipca.</td></tr>
+    <tr><td>13 lipca</td><td>Chat</td><td>ChatGPT wraca do WhatsApp w EOG.</td></tr>
+    <tr><td>13 lipca</td><td>Codex</td><td>CLI 0.144.2 przywraca wcześniejszą politykę automatycznego review Guardian po regresji promptu.</td></tr>
+  </tbody></table></div>
+</section>
+
+<div class="part"><div class="roman">I</div><h2>ChatGPT Chat</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">6. Chat i GPT-5.6</h2>
+  <p class="lead">Chat pozostaje przestrzenią natychmiastowej rozmowy do pytań, syntezy, researchu, burzy mózgów i szybkiego redagowania. Na komputerze znajduje się teraz obok Work i Codex w jednej aplikacji.</p>
+  <p>GPT-5.6 Sol zasila poziomy rozumowania Medium i High oraz Extra High tam, gdzie pozwala na to plan. Różnica praktyczna polega na ilości analizy wykonywanej przed odpowiedzią.</p>
+  <div class="table-wrap"><table><thead><tr><th>Poziom</th><th>Zastosowanie</th><th>Kompromis</th></tr></thead><tbody>
+    <tr><td>Instant / domyślny</td><td>Proste pytania, przeredagowanie, streszczenia i pierwsze rozeznanie.</td><td>Najszybszy, ale słabszy przy decyzjach z wieloma kryteriami.</td></tr>
+    <tr><td>Medium</td><td>Porównania, uporządkowane rekomendacje i umiarkowana analiza.</td><td>Więcej czasu i użycia niż Instant.</td></tr>
+    <tr><td>High</td><td>Złożone decyzje, dogłębna analiza dokumentów i wymagające planowanie.</td><td>Wolniejszy; nadal wymaga kontroli człowieka.</td></tr>
+    <tr><td>Extra High</td><td>Najwyższy wysiłek rozumowania na uprawnionych planach.</td><td>Zależny od planu i najbardziej zasobożerny.</td></tr>
+  </tbody></table></div>
+  <div class="callout"><strong>Zalecana metoda</strong>Użyj Instant do orientacji, Medium lub High do decyzji, a następnie poproś o krytyczną kontranalizę. Wyższy poziom nie zwalnia z kontroli źródeł, liczb i założeń.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">7. Samouczek Chat — wiarygodna rekomendacja</h2>
+  <div class="steps">
+    <div class="step">Otwórz Chat w web, mobile lub zunifikowanej aplikacji desktop.</div>
+    <div class="step">Dołącz zatwierdzone źródła i określ, z jakich źródeł zewnętrznych wolno korzystać.</div>
+    <div class="step">Najpierw poproś o tabelę porównawczą.</div>
+    <div class="step">Wymagaj oddzielenia faktów, założeń i ocen.</div>
+    <div class="step">Uruchom drugi przebieg, którego celem jest obalenie pierwszej rekomendacji.</div>
+    <div class="step">Sprawdź kluczowe liczby i cytowania przed wykorzystaniem wyniku.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Prompt główny</div><pre>Załączam trzy oferty dostawców. Porównaj je według całkowitego kosztu, terminu, ryzyka umownego, odwracalności, wymagań bezpieczeństwa i kosztów ukrytych. Podaj źródło każdej istotnej informacji. Zakończ rekomendacją, poziomem pewności i listą brakujących danych, które mogłyby zmienić decyzję. 
