@@ -1,0 +1,81 @@
+v><pre>Transformă raportul aprobat într-o prezentare de zece slide-uri pentru conducere. Folosește șablonul atașat ca referință vizuală, păstrează secvența constatare → cauze → opțiuni → decizie, limitează fiecare slide la o idee principală și adaugă notițe pentru prezentator.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">12. Tutorial Work — raportare lunară</h2>
+  <p class="lead">Caz: consolidarea lunară a vânzărilor, pipeline-ului, feedbackului clienților și incidentelor, apoi crearea unui registru verificat, a unei note de management și a unei prezentări.</p>
+  <div class="steps">
+    <div class="step"><strong>Pregătiți contextul.</strong> Creați un proiect dedicat, adăugați șabloanele aprobate și conectați numai sursele necesare.</div>
+    <div class="step"><strong>Definiți criteriile de acceptare.</strong> Precizați publicul, termenul, definițiile KPI, toleranțele și controalele obligatorii.</div>
+    <div class="step"><strong>Cereți mai întâi un plan.</strong> Work trebuie să arate lista surselor, metoda și întrebările blocante înainte de creare.</div>
+    <div class="step"><strong>Reconciliați datele.</strong> Solicitați detectarea duplicatelor, abaterilor neexplicate, perioadelor lipsă și un tabel de reconciliere.</div>
+    <div class="step"><strong>Generați livrabilele.</strong> Creați registrul, nota și prezentarea pe baza cifrelor validate.</div>
+    <div class="step"><strong>Executați trei revizuiri.</strong> Coerența numerică, trasabilitatea surselor și lizibilitatea executivă.</div>
+    <div class="step"><strong>Programați ciclul următor.</strong> Creați o sarcină lunară care alertează numai când toate sursele sunt disponibile.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Prompt principal Work</div><pre>Ești responsabil de raportarea lunară. Înainte de a acționa, prezintă planul, lista surselor și aprobările necesare. Apoi:
+1. reconciliază cifrele din fișierele și aplicațiile autorizate;
+2. semnalează fiecare incoerență sau perioadă lipsă;
+3. creează un registru trasabil;
+4. redactează o notă executivă de șase pagini;
+5. creează o prezentare de zece slide-uri;
+6. efectuează un control încrucișat final.
+Nu modifica, publica sau trimite nicio sursă fără aprobarea mea explicită.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">13. Sarcini programate și Sites</h2>
+  <h3>Sarcini programate</h3>
+  <p>Pagina Scheduled de pe web și mobil acceptă sarcini unice, recurente și de monitorizare. Limitele variază după plan. Voice și GPT-urile personalizate nu sunt acceptate în sarcinile programate.</p>
+  <div class="prompt"><div class="prompt-title">Sarcină de monitorizare</div><pre>În fiecare zi lucrătoare, verifică dashboardul de suport autorizat. Notifică-mă numai dacă incidentele critice depășesc trei, cel mai vechi incident nerezolvat are peste 24 de ore sau respectarea SLA scade sub 97%. Include dovada, impactul și acțiunea recomandată. Dacă nicio condiție nu este îndeplinită, nu trimite notificare.</pre></div>
+  <h3>ChatGPT Sites</h3>
+  <p>Sites poate transforma un rezultat Work într-un site găzduit în regiunile eligibile. La lansare, publicarea publică sau lansarea extinsă nu este disponibilă în SEE; Regatul Unit și Elveția trebuie verificate separat. Considerați Sites indisponibil până când apare efectiv în workspace-ul și țara țintă.</p>
+</section>
+
+<div class="part"><div class="roman">III</div><h2>ChatGPT Codex</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">14. Codex în aplicația desktop unificată</h2>
+  <p class="lead">Codex este mediul de inginerie software pentru analiza depozitelor, modificarea codului, executarea comenzilor, testare și revizuire. Din 9 iulie este integrat în aplicația desktop ChatGPT unificată.</p>
+  <ul>
+    <li>Editare directă a fișierelor Markdown și de cod.</li>
+    <li>Adnotări inline pentru feedback țintit.</li>
+    <li>Bară laterală pentru revizuirea pull request-urilor GitHub.</li>
+    <li>Lucru cu mai multe depozite într-o singură sarcină.</li>
+    <li>Computer Use mai rapid și progres mai clar.</li>
+    <li>Gestionarea pluginurilor din setări.</li>
+    <li>Fiabilitate mai bună pentru Remote pe mobil și îmbunătățiri video.</li>
+  </ul>
+  <div class="callout"><strong>Regula interfeței</strong>Codex nu se selectează ca mod pe web sau mobil. Mediul complet rulează pe desktop, CLI sau IDE; sarcinile desktop acceptate pot apărea în fila Remote de pe mobil.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">15. Modele, interfețe și restricții europene</h2>
+  <div class="table-wrap"><table><thead><tr><th>Nivel de model</th><th>Utilizare tipică</th><th>Disponibilitate orientativă</th></tr></thead><tbody>
+    <tr><td>Terra</td><td>Sarcini uzuale de cod, navigare și modificări moderate.</td><td>Free/Go și planuri plătite, în limita cotelor.</td></tr>
+    <tr><td>Sol</td><td>Implementare complexă, depanare și lucru în mai mulți pași.</td><td>Plus, Pro, Business și Enterprise.</td></tr>
+    <tr><td>Luna</td><td>Un alt echilibru pentru fluxuri avansate eligibile.</td><td>Plus, Pro, Business și Enterprise.</td></tr>
+  </tbody></table></div>
+  <ul>
+    <li><strong>Desktop:</strong> spațiu vizual de proiect, fișiere, terminale, revizuire și Computer Use.</li>
+    <li><strong>CLI:</strong> lucru în terminal, scripting și automatizare. Versiunea 0.144.2 a corectat regresia de prompt Guardian pentru auto-revizuire.</li>
+    <li><strong>IDE:</strong> dezvoltare în editor cu contextul depozitului.</li>
+    <li><strong>Remote mobil:</strong> monitorizare și interacțiune cu sarcini acceptate pornite pe desktop.</li>
+  </ul>
+  <div class="callout warning"><strong>Record &amp; Replay</strong>Această funcție Computer Use este inițial indisponibilă în UE, Regatul Unit și Elveția. Nu construiți un flux european obligatoriu în jurul ei până la modificarea listei oficiale.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">16. Tutorial Codex — corectarea sigură a unei regresii multi-repository</h2>
+  <div class="steps">
+    <div class="step"><strong>Deschideți depozitele.</strong> Adăugați folderele frontend, API și bibliotecă partajată într-o singură sarcină Codex.</div>
+    <div class="step"><strong>Analizați fără editare.</strong> Solicitați reproducerea erorii, cartografierea dependențelor și cauza probabilă.</div>
+    <div class="step"><strong>Definiți limitele.</strong> Precizați fișierele modificabile, comenzile permise și acțiunile care necesită aprobare.</div>
+    <div class="step"><strong>Creați ramuri izolate.</strong> Folosiți o ramură sau worktree dedicat pentru fiecare depozit.</div>
+    <div class="step"><strong>Aplicați cea mai mică soluție compatibilă.</strong> Păstrați interfețele publice dacă dovezile nu impun o schimbare coordonată.</div>
+    <div class="step"><strong>Testați între depozite.</strong> Rulați teste unitare, de integrare, contract și regresie.</div>
+    <div class="step"><strong>Revizuiți diff-ul.</strong> Solicitați verificări de securitate, performanță și compatibilitate.</div>
+    <div class="step"><strong>Opriți-vă înainte de publicare.</strong> Cereți aprobarea umană înainte de push, pull request, deploy sau comandă distructivă.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Prompt numai pentru analiză</div><pre>Analizează regresia de checkout în depozitele frontend, API și bibliotecă partajată. Nu modifica încă fișierele. Reproduce problema, identifică cauza rădăcină, enumeră interfețele afectate, propune cea mai mică soluție compatibilă și definește planul de teste. Separă dovezile de ipoteze.</pre></div>
+  <div class="prompt"><div class="prompt-title">Prompt de implementare după aprobare</div><pre>Aplică soluția aprobată în ramuri izolate. Poți edita numai fișierele enumerate și executa comenzile de test aprobate. Arată progresul și fiecare diff important. Oprește-te și întreabă înainte de instalarea unor dependențe, schimbarea API-urilor publice, push, deschiderea unui pull request, dep
