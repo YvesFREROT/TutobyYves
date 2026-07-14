@@ -1,0 +1,64 @@
+ție de abonament, interfață, cont și regiune. Europa nu este o singură zonă de lansare. Ghidul diferențiază Spațiul Economic European (SEE), Uniunea Europeană, Regatul Unit, Elveția și alte țări europene acceptate atunci când documentația oficială face această distincție.</div>
+  <p>Pachetul principal a fost anunțat pe 9 iulie: ChatGPT Work, aplicația desktop unificată, GPT-5.6, Directorul de pluginuri și mai multe schimbări Codex. O lansare globală pe parcursul uneia sau mai multor zile poate explica disponibilitatea în Europa începând cu 10 iulie.</p>
+  <div class="callout warning"><strong>Regula de verificare</strong>O funcție este inclusă dacă a fost anunțată oficial în intervalul 9–14 iulie și este globală, disponibilă explicit în SEE sau relevantă în mod direct pentru utilizatorii europeni. Excluderile regionale sunt păstrate și semnalate.</div>
+  <p class="small">Prompturile și fluxurile de lucru sunt exemple create pentru acest tutorial; nu sunt citate din OpenAI.</p>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">2. Schimbările structurale</h2>
+  <ul>
+    <li><strong>O singură aplicație desktop:</strong> Chat, Work și Codex sunt reunite pe macOS și Windows.</li>
+    <li><strong>Trei moduri diferite:</strong> Chat pentru conversații imediate, Work pentru livrabile de business și Codex pentru dezvoltare software.</li>
+    <li><strong>Opțiuni noi de raționament:</strong> GPT-5.6 Sol alimentează nivelurile Medium, High și Extra High pe abonamentele eligibile.</li>
+    <li><strong>Fluxuri reutilizabile:</strong> Directorul de pluginuri înlocuiește Directorul de aplicații și poate include Skills, aplicații și șabloane de aplicații.</li>
+    <li><strong>Execuție agentică:</strong> Work și Codex pot realiza sarcini în mai mulți pași, solicita aprobări și continua operațiuni de durată.</li>
+    <li><strong>Limitări europene explicite:</strong> Sites și Record &amp; Replay nu sunt disponibile în toate jurisdicțiile europene la lansare.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">3. Alegerea universului potrivit</h2>
+  <div class="table-wrap"><table><thead><tr><th>Univers</th><th>Scop principal</th><th>Context obișnuit</th><th>Exemplu</th></tr></thead><tbody>
+    <tr><td><strong>Chat</strong></td><td>Întrebări, cercetare, idei, redactare și analiză rapidă.</td><td>Istoric, fișiere atașate, căutare web, memorie conform setărilor și pluginuri când sunt disponibile.</td><td>Compararea a trei oferte comerciale și redactarea unei recomandări.</td></tr>
+    <tr><td><strong>Work</strong></td><td>Cercetare de durată, analiză structurată și livrabile finalizate.</td><td>Cloud pe web/mobil; fișiere locale și aplicații desktop autorizate; sarcini programate.</td><td>Transformarea datelor lunare într-un raport, un tabel verificat și o prezentare.</td></tr>
+    <tr><td><strong>Codex</strong></td><td>Modificări de cod, revizuire, teste, terminale și depozite.</td><td>Foldere locale, Git, IDE, GitHub, Computer Use, Remote și pluginuri tehnice.</td><td>Corectarea unei regresii în mai multe depozite și pregătirea unui pull request.</td></tr>
+  </tbody></table></div>
+  <div class="callout"><strong>Regulă rapidă</strong>Dacă rezultatul este în principal un răspuns, începeți cu Chat. Dacă este un fișier de business sau un flux repetabil, utilizați Work. Dacă implică un depozit, un terminal sau un diff, utilizați Codex.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">4. Disponibilitate în Europa la 14 iulie 2026</h2>
+  <div class="table-wrap"><table><thead><tr><th>Funcție</th><th>Data oficială</th><th>Situația europeană</th><th>Abonamente / interfețe</th><th>Precizare</th></tr></thead><tbody>
+    <tr><td>GPT-5.6 Sol în Chat</td><td>9 iulie</td><td>Lansare progresivă în locațiile europene acceptate, inclusiv SEE.</td><td>Abonamente plătite eligibile; nivelul depinde de plan.</td><td>Poate să nu fie încă vizibil în fiecare cont.</td></tr>
+    <tr><td>ChatGPT Work</td><td>9 iulie</td><td>Lansare progresivă în regiunile acceptate.</td><td>Abonamente plătite, cu excepția Free/Go; web, mobil și desktop.</td><td>Mai întâi Pro, Pro Lite, Enterprise și Edu; apoi Plus și Business.</td></tr>
+    <tr><td>Aplicația desktop unificată</td><td>9 iulie</td><td>Disponibilitate globală progresivă.</td><td>macOS și Windows.</td><td>Poate coexista temporar cu ChatGPT Classic.</td></tr>
+    <tr><td>Directorul de pluginuri</td><td>9 iulie</td><td>Disponibil în funcție de abonament, rol și regulile regionale ale aplicației de bază.</td><td>Toate planurile, cu funcții diferite.</td><td>Un plugin poate depinde de un serviciu indisponibil într-o anumită țară.</td></tr>
+    <tr><td>ChatGPT pe WhatsApp</td><td>13 iulie</td><td>Revine progresiv în SEE.</td><td>Numere WhatsApp cu prefix eligibil.</td><td>Se aplică prefixul țării, limitele de utilizare și activarea progresivă.</td></tr>
+    <tr><td>ChatGPT Sites</td><td>9 iulie</td><td>Publicarea publică / lansarea extinsă nu este disponibilă în SEE la început; verificați separat Regatul Unit și Elveția.</td><td>Planuri plătite eligibile în regiunile deschise.</td><td>Nu transformați Sites într-o dependență fără confirmarea țării.</td></tr>
+    <tr><td>Codex în aplicația desktop</td><td>9 iulie</td><td>Disponibil în Europa.</td><td>Inclus în toate planurile, cu limite diferite.</td><td>Codex nu este un mod selectabil pe web sau mobil; anumite sarcini la distanță pot fi urmărite pe mobil.</td></tr>
+    <tr><td>Record &amp; Replay</td><td>Documentația curentă</td><td>Inițial indisponibil în UE, Regatul Unit și Elveția.</td><td>Utilizatori Codex eligibili pe macOS; necesită Computer Use.</td><td>Verificați statutul regional înainte de instruire.</td></tr>
+    <tr><td>GPT-Live-1 Voice</td><td>8 iulie</td><td>Lansare progresivă pentru conturile de consum eligibile.</td><td>Web/mobil pentru consumatori.</td><td>Nu este disponibil în Work, Codex, Business, Enterprise sau Edu la lansare; fără video și partajare de ecran.</td></tr>
+  </tbody></table></div>
+  <div class="callout warning"><strong>Europa nu înseamnă un singur drept de acces</strong>Verificați întotdeauna țara, abonamentul, rolul în workspace, versiunea clientului și setările administratorului în contul real.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">5. Cronologie</h2>
+  <div class="table-wrap"><table><thead><tr><th>Dată</th><th>Univers</th><th>Actualizare</th></tr></thead><tbody>
+    <tr><td>8 iulie</td><td>Chat</td><td>Începe lansarea GPT-Live-1 pentru experiențele Voice de consum.</td></tr>
+    <tr><td>9 iulie</td><td>Chat</td><td>GPT-5.6, Directorul de pluginuri, oprirea chat-urilor de grup noi și anunțul retragerii Atlas.</td></tr>
+    <tr><td>9 iulie</td><td>Work</td><td>ChatGPT Work, sarcini de durată și aplicația desktop unificată.</td></tr>
+    <tr><td>9 iulie</td><td>Codex</td><td>Codex intră în aplicația desktop cu editare directă, adnotări, revizuire PR și lucru multi-repository.</td></tr>
+    <tr><td>Din 10 iulie</td><td>Europa</td><td>Fereastră probabilă de vizibilitate pentru lansările progresive anunțate pe 9 iulie.</td></tr>
+    <tr><td>13 iulie</td><td>Chat</td><td>ChatGPT revine pe WhatsApp în SEE.</td></tr>
+    <tr><td>13 iulie</td><td>Codex</td><td>CLI 0.144.2 restabilește politica anterioară Guardian de auto-revizuire după o regresie de prompt.</td></tr>
+  </tbody></table></div>
+</section>
+
+<div class="part"><div class="roman">I</div><h2>ChatGPT Chat</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">6. Chat și GPT-5.6</h2>
+  <p class="lead">Chat rămâne spațiul conversațional imediat pentru întrebări, sinteză, cercetare, brainstorming și redactare rapidă. Pe desktop apare acum alături de Work și Codex în aceeași aplicație.</p>
+  <p>GPT-5.6 Sol alimentează nivelurile de raționament Medium și High, precum și Extra High acolo unde planul permite. Diferența practică este cantitatea de deliberare înainte de răspuns.</p>
+  <div class="table-wrap"><table><thead><tr><th>Nivel</th><th>Utilizare</th><th>Compro
