@@ -1,0 +1,58 @@
+<div class="decision"><div>Powtarzalna kontrola lub alert warunkowy?</div><div>Zadanie zaplanowane</div></div>
+  <div class="decision"><div>Hostowana witryna potrzebna w Europie?</div><div>Najpierw sprawdź kraj; Sites nie jest dostępne w EOG przy starcie.</div></div>
+  <h3>Oficjalne źródła OpenAI</h3>
+  <ol class="sources">
+    <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT Release Notes</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001354" target="_blank" rel="noopener">GPT-5.6 in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="noopener">ChatGPT Work and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001276-moving-to-the-new-chatgpt-desktop-app" target="_blank" rel="noopener">Moving to the new ChatGPT desktop app</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001256-plugins-in-codex" target="_blank" rel="noopener">Plugins in ChatGPT and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt" target="_blank" rel="noopener">Skills in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/10291617-tasks-in-chatgpt" target="_blank" rel="noopener">Scheduled Tasks in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001278-creating-and-editing-documents-spreadsheets-and-presentations-with-chatgpt-work" target="_blank" rel="noopener">Creating and editing files with ChatGPT Work</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites" target="_blank" rel="noopener">Creating and managing ChatGPT Sites</a></li>
+    <li><a href="https://developers.openai.com/codex/changelog" target="_blank" rel="noopener">Codex changelog</a></li>
+    <li><a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener">Using Codex with your ChatGPT plan</a></li>
+    <li><a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">Introducing GPT-Live</a></li>
+  </ol>
+  <div class="callout warning"><strong>Kontrola końcowa</strong>OpenAI może zmieniać plany, limity, nazwy modeli, powierzchnie i ograniczenia regionalne. Przed wdrożeniem sprawdź funkcję na rzeczywistym koncie i przeczytaj aktualną oficjalną stronę.</div>
+  <a class="backtop" href="#pl-scope">Do góry</a>
+</section>
+<div class="footer">OpenAI Europe Guide · 14 July 2026</div></article><article data-lang="ru"><header class="hero"><div class="eyebrow">OPENAI · EUROPE · 10 JULY 2026+</div><h1>Руководство OpenAI — обновления, доступные в Европе с 10 июля 2026 года</h1><div class="subtitle">ChatGPT Chat, ChatGPT Work и ChatGPT Codex: доступность, принципы работы и практические инструкции</div><div class="updated">Информация актуальна на 14 июля 2026 года (Europe/Paris)</div><div class="universe-grid"><div class="universe-card"><strong>Chat</strong><span>Диалог, поиск и быстрая помощь</span></div><div class="universe-card"><strong>Work</strong><span>Готовые материалы, анализ и длительные задачи</span></div><div class="universe-card"><strong>Codex</strong><span>Код, репозитории, терминал и ревью</span></div></div></header><section class="section" id="ru-scope">
+  <h2 data-toc="1">1. Охват, даты и метод проверки</h2>
+  <p class="lead">Руководство охватывает официальные обновления OpenAI, объявленные с 9 по 14 июля 2026 года, которые из-за поэтапного развертывания могли появиться в европейских аккаунтах начиная с 10 июля.</p>
+  <div class="callout"><strong>Как понимать даты</strong>OpenAI обычно публикует дату объявления, а затем включает функцию с учетом тарифа, интерфейса, аккаунта и региона. Европа не является единой зоной запуска. Поэтому руководство различает Европейскую экономическую зону (ЕЭЗ), Европейский союз, Великобританию, Швейцарию и другие поддерживаемые европейские страны, когда это делает официальная документация.</div>
+  <p>Основной пакет был объявлен 9 июля: ChatGPT Work, единое настольное приложение, GPT-5.6, Каталог плагинов и несколько изменений Codex. Глобальное развертывание в течение одного или нескольких дней объясняет возможную доступность в Европе с 10 июля.</p>
+  <div class="callout warning"><strong>Правило включения</strong>Функция включена, если она была официально объявлена 9–14 июля и доступна глобально, явно доступна в ЕЭЗ или существенно важна для европейских пользователей. Региональные исключения не скрываются.</div>
+  <p class="small">Промпты и процессы ниже созданы для этого учебного материала и не являются цитатами OpenAI.</p>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">2. Структурные изменения</h2>
+  <ul>
+    <li><strong>Единое настольное приложение:</strong> Chat, Work и Codex объединены на macOS и Windows.</li>
+    <li><strong>Три режима работы:</strong> Chat для быстрого диалога, Work для готовых бизнес-материалов, Codex для разработки ПО.</li>
+    <li><strong>Новые уровни рассуждения:</strong> GPT-5.6 Sol обеспечивает Medium, High и Extra High на подходящих тарифах.</li>
+    <li><strong>Повторно используемые процессы:</strong> Каталог плагинов заменяет Каталог приложений и может объединять Skills, приложения и шаблоны приложений.</li>
+    <li><strong>Агентное выполнение:</strong> Work и Codex могут выполнять многошаговые задачи, запрашивать подтверждения и продолжать длительные операции.</li>
+    <li><strong>Явные европейские ограничения:</strong> Sites и Record &amp; Replay при запуске доступны не во всех европейских юрисдикциях.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">3. Как выбрать нужный режим</h2>
+  <div class="table-wrap"><table><thead><tr><th>Режим</th><th>Основная задача</th><th>Типичный контекст</th><th>Пример</th></tr></thead><tbody>
+    <tr><td><strong>Chat</strong></td><td>Вопросы, поиск, идеи, текст и быстрый анализ.</td><td>История, вложения, веб-поиск, память по настройкам и плагины при наличии.</td><td>Сравнить три коммерческих предложения и подготовить рекомендацию.</td></tr>
+    <tr><td><strong>Work</strong></td><td>Длительное исследование, структурный анализ и готовые материалы.</td><td>Облако на web/mobile; локальные файлы и разрешенные настольные приложения; запланированные задачи.</td><td>Преобразовать месячные данные в отчет, проверенную таблицу и презентацию.</td></tr>
+    <tr><td><strong>Codex</strong></td><td>Изменение и ревью кода, тесты, терминалы и репозитории.</td><td>Локальные папки, Git, IDE, GitHub, Computer Use, Remote и технические плагины.</td><td>Исправить регрессию в нескольких репозиториях и подготовить pull request.</td></tr>
+  </tbody></table></div>
+  <div class="callout"><strong>Быстрое правило</strong>Если результатом должен быть ответ — начните с Chat. Если нужен бизнес-файл или повторяемый процесс — Work. Если нужны репозиторий, терминал или diff — Codex.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">4. Доступность в Европе на 14 июля 2026 года</h2>
+  <div class="table-wrap"><table><thead><tr><th>Функция</th><th>Официальная дата</th><th>Ситуация в Европе</th><th>Тарифы / интерфейсы</th><th>Ограничение</th></tr></thead><tbody>
+    <tr><td>GPT-5.6 Sol в Chat</td><td>9 июля</td><td>Поэтапный запуск в поддерживаемых европейских регионах, включая ЕЭЗ.</td><td>Подходящие платные тарифы; уровень зависит от тарифа.</td><td>Функция может еще не отображаться в конкретном аккаунте.</td></tr>
+    <tr><td>ChatGPT Work</td><td>9 июля</td><td>Поэтапный запуск в поддерживаемых регионах.</td><td>Платные тарифы, кроме Free/Go; web, mobile и desktop.</td><td>Сначала Pro, Pro Lite, Enterprise и Edu; затем Plus и Business.</td></tr>
+    <tr><td>Единое desktop-приложение</td><td>9 июля</td><td>Постепенная глобальная доступность.</td><td>macOS и Windows.</td><td>Временно может сосуществовать с ChatGPT Classic.</td></tr>
+    <tr><td>Каталог плагинов</td><td>9 июля</td><td>Зависит от тарифа, р
