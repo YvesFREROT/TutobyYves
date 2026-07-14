@@ -1,0 +1,77 @@
+mote peut accéder à certaines tâches desktop prises en charge.</li>
+  </ul>
+  <div class="callout"><strong>Correctifs CLI du 13 juillet</strong>La version 0.144.2 a rétabli l’ancienne politique et le comportement de l’auto-revue Guardian après une régression de prompting. La version 0.144.3 est une publication de version sans changement de code supplémentaire.</div>
+  <div class="callout danger"><strong>Restrictions</strong>Record &amp; Replay exclut initialement l’Union européenne, la Suisse et le Royaume-Uni. Sites est indisponible dans l’EEE au lancement. Les autres fonctions doivent être vérifiées selon le plan, la version du client, le pays et les réglages d’administration.</div>
+</section>
+
+<div class="part"><div class="roman">IV</div><h2>Déploiement et gouvernance</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">22. Contrôles administrateur et permissions</h2>
+  <ul>
+    <li><strong>Plugins :</strong> les administrateurs Business, Enterprise et Edu gèrent l’installation dans Workspace settings &gt; Plugins et les droits des apps dans Workspace settings &gt; Apps.</li>
+    <li><strong>Apps :</strong> les contrôles existants déterminent les données accessibles, les actions autorisées, les validations et les restrictions de domaine.</li>
+    <li><strong>Skills :</strong> les permissions peuvent séparer création, upload, partage, publication et installation. Pour Enterprise/Edu, elles sont actuellement désactivées par défaut, avec activation par défaut annoncée à partir du 23 juillet sauf opt-out.</li>
+    <li><strong>Modèles :</strong> dans les espaces gérés, l’accès à GPT-5.6 dépend aussi des réglages de l’administrateur et du rôle.</li>
+    <li><strong>Fichiers locaux :</strong> sur desktop, n’accorder l’accès qu’aux dossiers nécessaires.</li>
+  </ul>
+  <div class="callout"><strong>Principe de sécurité</strong>Un plugin n’outrepasse pas les droits du système source. Un utilisateur qui ne peut pas accéder à un fichier, dépôt, canal ou enregistrement dans l’outil d’origine ne doit pas y accéder par l’intermédiaire du plugin.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">23. Checklist de mise en service en Europe</h2>
+  <ul class="checklist">
+    <li>Mettre à jour l’application de bureau et vérifier la présence des modes Chat, Work et Codex.</li>
+    <li>Conserver temporairement ChatGPT Classic si des capacités Enterprise historiques sont encore nécessaires.</li>
+    <li>Vérifier le plan, le pays et les modèles visibles ; ne pas supposer que le rollout est terminé.</li>
+    <li>Tester Work avec un cas non critique et des données non sensibles avant un déploiement large.</li>
+    <li>Cartographier les plugins installés, les apps sous-jacentes et les actions qu’ils peuvent exécuter.</li>
+    <li>Définir les validations obligatoires avant publication, envoi, modification de source ou création de PR.</li>
+    <li>Séparer clairement les workflows cloud et locaux, notamment pour Work desktop.</li>
+    <li>Ne pas prévoir Sites ou Record &amp; Replay sans vérifier leur disponibilité dans le pays européen concerné.</li>
+    <li>Former les utilisateurs à choisir Chat, Work ou Codex selon le résultat attendu.</li>
+    <li>Mettre en place une revue mensuelle des notes de version et de la documentation OpenAI.</li>
+  </ul>
+</section>
+
+<div class="part"><div class="roman">V</div><h2>Aide-mémoire et sources</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">24. Modèle de prompt universel</h2>
+  <div class="prompt"><div class="prompt-title">Structure recommandée</div><pre>Objectif : [résultat attendu]
+Contexte : [situation, public, décision]
+Sources autorisées : [fichiers, apps, sites]
+Contraintes : [format, ton, délais, éléments immuables]
+Méthode : commence par un plan et pose uniquement les questions bloquantes
+Contrôles : vérifie les chiffres, cite les sources et signale les incertitudes
+Autorisations : demande mon approbation avant toute action externe ou irréversible
+Livrable : [document, tableau, présentation, diff, PR, notification]</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">25. Prompts prêts à adapter</h2>
+  <div class="prompt"><div class="prompt-title">Chat — décision rapide</div><pre>Compare ces options selon [critères]. Donne une recommandation, puis une contre-analyse qui pourrait l’invalider. Sépare faits, hypothèses et jugements.</pre></div>
+  <div class="prompt"><div class="prompt-title">Work — livrable complet</div><pre>À partir des sources autorisées, construis [livrable]. Commence par un plan, une liste de sources et les contrôles de qualité. Produis ensuite le fichier, vérifie-le et demande ma validation avant partage.</pre></div>
+  <div class="prompt"><div class="prompt-title">Codex — intervention sécurisée</div><pre>Analyse d’abord sans modifier. Propose la cause racine, le correctif minimal, le plan de tests et les autorisations. Après validation, travaille dans une branche isolée et arrête-toi avant push ou PR.</pre></div>
+  <div class="prompt"><div class="prompt-title">Plugin — action sous contrôle</div><pre>@[plugin], recherche [information] dans les sources autorisées. Cite les résultats. Ne modifie, n’envoie et ne publie rien sans validation explicite.</pre></div>
+  <div class="prompt"><div class="prompt-title">Tâche planifiée — alerte utile</div><pre>Vérifie [source] selon [fréquence]. Notifie-moi seulement si [condition importante]. Dans ce cas, indique la preuve, l’impact et l’action recommandée.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">26. Sources officielles et arbre de décision</h2>
+  <ol class="sources">
+    <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT — Release Notes</a></li>
+    <li><a href="https://openai.com/products/release-notes/" target="_blank" rel="noopener">OpenAI Product Release Notes</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001354" target="_blank" rel="noopener">GPT-5.6 in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="noopener">ChatGPT Work and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001276-moving-to-the-new-chatgpt-desktop-app" target="_blank" rel="noopener">Moving to the new ChatGPT desktop app</a></li>
+    <li><a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/" target="_blank" rel="noopener">ChatGPT is now a partner for your most ambitious work</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001256-plugins-in-codex" target="_blank" rel="noopener">Plugins in ChatGPT and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt" target="_blank" rel="noopener">Skills in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/10291617-tasks-in-chatgpt" target="_blank" rel="noopener">Scheduled Tasks in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001278-creating-and-editing-documents-spreadsheets-and-presentations-with-chatgpt-work" target="_blank" rel="noopener">Creating and editing documents, spreadsheets, and presentations with ChatGPT Work</a></li>
+    <li><a href="https://help.openai.com/en/articles/10193193-1-800-chatgpt-calling-and-messaging-chatgpt-with-your-phone" target="_blank" rel="noopener">1-800-ChatGPT — Calling and Messaging ChatGPT with your phone</a></li>
+    <li><a href="https://developers.openai.com/codex/changelog" target="_blank" rel="noopener">Codex changelog</a></li>
+    <li><a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener">Using Codex with your ChatGPT plan</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites" target="_blank" rel="noopener">Creating and managing ChatGPT Sites</a></li>
+    <li><a href="https://help.openai.com/en/articles/8400625-voice-mode-faq" target="_bla
