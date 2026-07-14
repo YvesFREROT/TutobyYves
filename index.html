@@ -9,55 +9,39 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Ro
 </style>
 </head>
 <body>
-<main><section class="card"><h1>Chargement de la version complète…</h1><p>Reconstitution et vérification du tutoriel original en six langues.</p><p id="status" class="status" aria-live="polite">Préparation des fichiers.</p></section></main>
+<main><section class="card"><h1>Chargement de la version complète…</h1><p>Vérification et décompression du tutoriel original en six langues.</p><p id="status" class="status" aria-live="polite">Préparation des fichiers.</p></section></main>
 <script>
 (async()=>{
   const status=document.getElementById('status');
-  const version='original-f8427892-fix4-20260714';
-  const expected='f842789242721b5be6a93a34f34ca3f97ebfb5598edd51b038e6468bb04513af';
-  const parts=[
-    ['payload/original-001.txt','text'],['payload/original-002.txt','text'],['payload/original-003.txt','text'],
-    ['payload/original-004.txt','text'],['payload/original-005.txt','text'],['payload/original-006.txt','text'],
-    ['payload/original-007.txt','text'],['payload/original-008.txt','text'],['payload/fix-009a.b64','base64'],['payload/fix-009b.b64','base64'],
-    ['payload/original-010.txt','text'],['payload/original-011.txt','text'],['payload/original-012.txt','text'],
-    ['payload/original-013.txt','text'],['payload/original-014.txt','text'],['payload/original-015.txt','text'],
-    ['payload/original-016.txt','text'],['payload/original-017.txt','text'],['payload/original-018.txt','text'],
-    ['payload/fix-019a.b64','base64'],['payload/fix-019b.b64','base64'],['payload/fix-019c.b64','base64'],['payload/fix-019d.b64','base64'],
-    ['payload/original-020a.txt','text'],['payload/original-020b.txt','text'],['payload/original-021.txt','text'],
-    ['payload/original-022a.txt','text'],['payload/original-022b.txt','text'],['payload/original-023a.txt','text'],
-    ['payload/original-023b1.txt','text'],['payload/original-023b2.b64','base64'],['payload/original-024a.txt','text'],
-    ['payload/original-024b.txt','text'],['payload/fix-024c-a.b64','base64'],['payload/fix-024c-b.b64','base64'],
-    ['payload/fix-024c-c.b64','base64'],['payload/fix-024c-d.b64','base64'],['payload/fix-024c1.b64','base64'],
-    ['payload/original-024d.txt','text'],['payload/original-025a.txt','text'],['payload/original-025b.txt','text'],
-    ['payload/original-025c.txt','text'],['payload/original-025d.txt','text'],['payload/fix-026.b64','base64']
-  ];
-  function decodeBase64Utf8(value){
-    const binary=atob(value.replace(/\s+/g,''));
-    const bytes=new Uint8Array(binary.length);
-    for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
-    return new TextDecoder('utf-8').decode(bytes);
-  }
+  const version='gzip-07607aad-v1-20260714';
+  const expectedGzip='07607aaddd378c9e1464274597a7a6c49ecbd7b46ea305f20b421afbf1058675';
+  const expectedHtml='f842789242721b5be6a93a34f34ca3f97ebfb5598edd51b038e6468bb04513af';
+  const files=Array.from({length:11},(_,i)=>`payload/gzip-${String(i).padStart(2,'0')}.b64`);
+  const hex=buffer=>[...new Uint8Array(buffer)].map(b=>b.toString(16).padStart(2,'0')).join('');
   try{
+    if(!('DecompressionStream' in window)) throw new Error('Ce navigateur ne prend pas en charge la décompression gzip intégrée. Utilisez une version récente de Chrome, Edge, Firefox ou Safari.');
     const chunks=[];
-    for(let i=0;i<parts.length;i++){
-      status.textContent=`Chargement ${i+1}/${parts.length}…`;
-      const [file,encoding]=parts[i];
-      const response=await fetch(`${file}?v=${version}`,{cache:'no-store'});
-      if(!response.ok)throw new Error(`Fichier manquant : ${file} (${response.status})`);
-      let value=await response.text();
-      if(file==='payload/fix-024c-b.b64') value=value.replace('0LXQtNCw0LPQvtCy','0LXQtNCw0LPRg9Cy');
-      chunks.push(encoding==='base64'?decodeBase64Utf8(value):value);
+    for(let i=0;i<files.length;i++){
+      status.textContent=`Chargement ${i+1}/${files.length}…`;
+      const response=await fetch(`${files[i]}?v=${version}`,{cache:'no-store'});
+      if(!response.ok) throw new Error(`Fichier manquant : ${files[i]} (${response.status})`);
+      chunks.push(await response.text());
     }
-    status.textContent='Vérification de l’intégrité…';
-    const html=chunks.join('');
-    const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(html));
-    const actual=[...new Uint8Array(digest)].map(b=>b.toString(16).padStart(2,'0')).join('');
-    if(actual!==expected)throw new Error(`Échec du contrôle d’intégrité.\nAttendu : ${expected}\nObtenu : ${actual}`);
-    document.open(); document.write(html); document.close();
-  }catch(error){
-    status.className='error';
-    status.textContent=error instanceof Error?error.message:String(error);
-  }
+    const encoded=chunks.join('').replace(/\s+/g,'');
+    const binary=atob(encoded);
+    const gzipBytes=new Uint8Array(binary.length);
+    for(let i=0;i<binary.length;i++) gzipBytes[i]=binary.charCodeAt(i);
+    status.textContent='Vérification de l’archive…';
+    const actualGzip=hex(await crypto.subtle.digest('SHA-256',gzipBytes));
+    if(actualGzip!==expectedGzip) throw new Error(`Échec du contrôle de l’archive.\nAttendu : ${expectedGzip}\nObtenu : ${actualGzip}`);
+    status.textContent='Décompression du tutoriel…';
+    const decompressed=await new Response(new Blob([gzipBytes]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+    status.textContent='Vérification du tutoriel…';
+    const actualHtml=hex(await crypto.subtle.digest('SHA-256',decompressed));
+    if(actualHtml!==expectedHtml) throw new Error(`Échec du contrôle du tutoriel.\nAttendu : ${expectedHtml}\nObtenu : ${actualHtml}`);
+    const html=new TextDecoder('utf-8',{fatal:true}).decode(decompressed);
+    document.open();document.write(html);document.close();
+  }catch(error){status.className='error';status.textContent=error instanceof Error?error.message:String(error);}
 })();
 </script>
 </body>
