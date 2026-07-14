@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutoriel OpenAI Europe — Chat, Work et Codex</title>
+  <meta name="description" content="Tutoriel multilingue consacré aux nouveautés ChatGPT Chat, Work et Codex en Europe.">
+  <style>
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f7f7f5;color:#1f2937}
+    main{min-height:100%;display:grid;place-items:center;padding:2rem;box-sizing:border-box}
+    .card{max-width:42rem;background:#fff;border:1px solid #ddd;border-radius:16px;padding:2rem;box-shadow:0 12px 35px rgba(0,0,0,.08)}
+    h1{margin-top:0;font-size:1.5rem}p{line-height:1.55}.error{color:#9f1239}
+  </style>
+</head>
+<body>
+<main><section class="card"><h1>Chargement du tutoriel…</h1><p>Préparation des six versions linguistiques : français, anglais, roumain, polonais, russe et ukrainien.</p><p id="status" aria-live="polite"></p></section></main>
+<script>
+(async()=>{
+  const status=document.getElementById('status');
+  try{
+    if(!('DecompressionStream' in window))throw new Error('Ce navigateur ne prend pas en charge la décompression intégrée. Utilisez une version récente de Chrome, Edge, Firefox ou Safari.');
+    const files=['payload/01.txt','payload/02.txt','payload/03.txt','payload/04.txt','payload/05.txt'];
+    const responses=await Promise.all(files.map(file=>fetch(file,{cache:'no-store'})));
+    for(const response of responses)if(!response.ok)throw new Error(`Impossible de charger ${response.url} (${response.status}).`);
+    const encoded=(await Promise.all(responses.map(response=>response.text()))).join('').replace(/\s+/g,'');
+    const binary=atob(encoded);
+    const bytes=new Uint8Array(binary.length);
+    for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
+    const stream=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+    const tutorial=await new Response(stream).text();
+    document.open();document.write(tutorial);document.close();
+  }catch(error){status.className='error';status.textContent=error instanceof Error?error.message:String(error);}
+})();
+</script>
+</body>
+</html>
