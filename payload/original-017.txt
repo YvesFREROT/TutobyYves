@@ -1,0 +1,92 @@
+section class="section">
+  <h2 data-toc="1">13. Zadania zaplanowane i Sites</h2>
+  <h3>Zadania zaplanowane</h3>
+  <p>Strona Scheduled w web i mobile obsługuje zadania jednorazowe, cykliczne i monitorujące. Limity zależą od planu. Voice i własne GPT nie są obsługiwane w zadaniach zaplanowanych.</p>
+  <div class="prompt"><div class="prompt-title">Zadanie monitorujące</div><pre>W każdy dzień roboczy sprawdzaj autoryzowany pulpit wsparcia. Powiadom mnie tylko wtedy, gdy liczba incydentów krytycznych przekroczy trzy, najstarszy nierozwiązany incydent ma ponad 24 godziny albo zgodność z SLA spadnie poniżej 97%. Dodaj dowód, wpływ i zalecane działanie. Jeśli żaden warunek nie jest spełniony, nie wysyłaj powiadomienia.</pre></div>
+  <h3>ChatGPT Sites</h3>
+  <p>Sites może zamienić wynik Work w hostowaną witrynę w uprawnionym regionie. Przy starcie publiczne publikowanie lub rozszerzone wdrożenie nie jest dostępne w EOG; Wielką Brytanię i Szwajcarię należy sprawdzić osobno. Traktuj Sites jako niedostępne, dopóki funkcja nie pojawi się w docelowym obszarze roboczym i kraju.</p>
+</section>
+
+<div class="part"><div class="roman">III</div><h2>ChatGPT Codex</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">14. Codex w zunifikowanej aplikacji desktop</h2>
+  <p class="lead">Codex jest środowiskiem inżynierii oprogramowania do analizy repozytoriów, modyfikacji kodu, wykonywania poleceń, testowania i review. Od 9 lipca jest zintegrowany z zunifikowaną aplikacją ChatGPT na komputer.</p>
+  <ul>
+    <li>Bezpośrednia edycja plików Markdown i kodu.</li>
+    <li>Adnotacje inline do precyzyjnego feedbacku.</li>
+    <li>Panel boczny review pull requestów GitHub.</li>
+    <li>Praca z wieloma repozytoriami w jednym zadaniu.</li>
+    <li>Szybszy Computer Use i czytelniejszy postęp.</li>
+    <li>Zarządzanie wtyczkami w ustawieniach.</li>
+    <li>Lepsza niezawodność Remote na telefonie oraz obsługa wideo.</li>
+  </ul>
+  <div class="callout"><strong>Zasada powierzchni</strong>Codex nie jest wybieranym trybem w web ani mobile. Pełne środowisko działa na desktop, w CLI lub IDE; obsługiwane zadania desktop mogą pojawić się w karcie Remote na telefonie.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">15. Modele, interfejsy i ograniczenia europejskie</h2>
+  <div class="table-wrap"><table><thead><tr><th>Poziom modelu</th><th>Typowe zastosowanie</th><th>Orientacyjna dostępność</th></tr></thead><tbody>
+    <tr><td>Terra</td><td>Rutynowe zadania kodowe, nawigacja i umiarkowane zmiany.</td><td>Free/Go oraz plany płatne, z limitami.</td></tr>
+    <tr><td>Sol</td><td>Złożona implementacja, debugowanie i praca wieloetapowa.</td><td>Plus, Pro, Business i Enterprise.</td></tr>
+    <tr><td>Luna</td><td>Alternatywna równowaga dla uprawnionych zaawansowanych przepływów.</td><td>Plus, Pro, Business i Enterprise.</td></tr>
+  </tbody></table></div>
+  <ul>
+    <li><strong>Desktop:</strong> wizualne środowisko projektu, pliki, terminale, review i Computer Use.</li>
+    <li><strong>CLI:</strong> praca terminalowa, skrypty i automatyzacja. Wersja 0.144.2 naprawiła regresję promptu automatycznego review Guardian.</li>
+    <li><strong>IDE:</strong> rozwój w edytorze z kontekstem repozytorium.</li>
+    <li><strong>Mobile Remote:</strong> monitorowanie i obsługa wspieranych zadań uruchomionych na desktop.</li>
+  </ul>
+  <div class="callout warning"><strong>Record &amp; Replay</strong>Ta funkcja Computer Use jest początkowo niedostępna w UE, Wielkiej Brytanii i Szwajcarii. Nie buduj obowiązkowego procesu europejskiego wokół niej, dopóki oficjalna lista regionów się nie zmieni.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">16. Samouczek Codex — bezpieczna naprawa regresji w wielu repozytoriach</h2>
+  <div class="steps">
+    <div class="step"><strong>Otwórz repozytoria.</strong> Dodaj foldery frontend, API i biblioteki wspólnej do jednego zadania Codex.</div>
+    <div class="step"><strong>Analizuj bez edycji.</strong> Poproś o odtworzenie błędu, mapę zależności i prawdopodobną przyczynę.</div>
+    <div class="step"><strong>Ustal granice.</strong> Wskaż pliki dozwolone do zmiany, polecenia i działania wymagające zatwierdzenia.</div>
+    <div class="step"><strong>Utwórz izolowane gałęzie.</strong> Użyj dedykowanej gałęzi lub worktree w każdym repozytorium.</div>
+    <div class="step"><strong>Wdróż najmniejszą zgodną poprawkę.</strong> Zachowaj interfejsy publiczne, chyba że dowody wymagają zmiany skoordynowanej.</div>
+    <div class="step"><strong>Testuj między repozytoriami.</strong> Uruchom testy jednostkowe, integracyjne, kontraktowe i regresyjne.</div>
+    <div class="step"><strong>Przejrzyj diff.</strong> Poproś o kontrolę bezpieczeństwa, wydajności i kompatybilności wstecznej.</div>
+    <div class="step"><strong>Zatrzymaj się przed publikacją.</strong> Wymagaj zgody człowieka przed push, pull requestem, wdrożeniem lub destrukcyjnym poleceniem.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Prompt tylko do analizy</div><pre>Przeanalizuj regresję checkoutu w repozytoriach frontend, API i biblioteki wspólnej. Na razie nie zmieniaj plików. Odtwórz problem, znajdź przyczynę źródłową, wymień dotknięte interfejsy, zaproponuj najmniejszą zgodną poprawkę i plan testów. Oddziel dowody od hipotez.</pre></div>
+  <div class="prompt"><div class="prompt-title">Prompt wdrożeniowy po zatwierdzeniu</div><pre>Zastosuj zatwierdzoną poprawkę na izolowanych gałęziach. Możesz edytować tylko wymienione pliki i uruchamiać zatwierdzone polecenia testowe. Pokazuj postęp i każdy istotny diff. Zatrzymaj się i zapytaj przed instalacją zależności, zmianą publicznych API, push, otwarciem pull requestu, wdrożeniem lub usunięciem danych.</pre></div>
+</section>
+
+<div class="part"><div class="roman">IV</div><h2>Zarządzanie i wdrożenie</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">17. Kontrole administratora i europejska lista wdrożeniowa</h2>
+  <p>Dostępność zależy nie tylko od kraju i planu, ale również od uprawnień obszaru roboczego, ról, kontroli danych, połączeń aplikacji i wersji klienta.</p>
+  <ul class="checklist">
+    <li>Zinwentaryzuj plany, kraje, typy obszarów roboczych i role administratorów.</li>
+    <li>Potwierdź rzeczywisty zestaw funkcji na koncie testowym w każdym kraju docelowym.</li>
+    <li>Zaktualizuj aplikację desktop na zarządzanych urządzeniach macOS i Windows.</li>
+    <li>Określ, które zespoły korzystają z Chat, Work lub Codex.</li>
+    <li>Przejrzyj uprawnienia wtyczek i aplikacji zgodnie z zasadą najmniejszych uprawnień.</li>
+    <li>Udokumentuj bramki akceptacji dla wysyłania, publikacji, usuwania, push i wdrożeń.</li>
+    <li>Wyraźnie rozdziel procesy Work w chmurze i lokalnie.</li>
+    <li>Nie polegaj na Sites ani Record &amp; Replay bez potwierdzenia dla kraju.</li>
+    <li>Wyeksportuj potrzebne informacje z Atlas przed 9 sierpnia 2026 r.</li>
+    <li>Co miesiąc przeglądaj oficjalne informacje, ponieważ nazwy, limity i dostępność regionalna mogą się zmieniać.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">18. Prompt uniwersalny, drzewo decyzji i źródła oficjalne</h2>
+  <div class="prompt"><div class="prompt-title">Struktura uniwersalna</div><pre>Cel: [wymagany wynik]
+Kontekst: [sytuacja, odbiorca, decyzja]
+Dozwolone źródła: [pliki, aplikacje, strony]
+Ograniczenia: [format, ton, termin, elementy niezmienne]
+Metoda: zacznij od planu i zadawaj wyłącznie pytania blokujące
+Kontrole: sprawdź obliczenia, cytuj źródła i oznacz niepewność
+Uprawnienia: poproś o zgodę przed każdą akcją zewnętrzną lub nieodwracalną
+Materiał: [odpowiedź, dokument, arkusz, prezentacja, diff, PR, powiadomienie]</pre></div>
+  <h3>Który tryb otworzyć?</h3>
+  <div class="decision"><div>Pytanie, synteza lub krótka analiza?</div><div>Chat</div></div>
+  <div class="decision"><div>Gotowy plik biznesowy lub długi proces wieloetapowy?</div><div>Work</div></div>
+  <div class="decision"><div>Repozytorium, terminal, testy lub review kodu?</div><div>Codex</div></div>
+  
