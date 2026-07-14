@@ -1,0 +1,15 @@
+noopener">ChatGPT Work and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001276-moving-to-the-new-chatgpt-desktop-app" target="_blank" rel="noopener">Moving to the new ChatGPT desktop app</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001256-plugins-in-codex" target="_blank" rel="noopener">Plugins in ChatGPT and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt" target="_blank" rel="noopener">Skills in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/10291617-tasks-in-chatgpt" target="_blank" rel="noopener">Scheduled Tasks in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001278-creating-and-editing-documents-spreadsheets-and-presentations-with-chatgpt-work" target="_blank" rel="noopener">Creating and editing files with ChatGPT Work</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites" target="_blank" rel="noopener">Creating and managing ChatGPT Sites</a></li>
+    <li><a href="https://developers.openai.com/codex/changelog" target="_blank" rel="noopener">Codex changelog</a></li>
+    <li><a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener">Using Codex with your ChatGPT plan</a></li>
+    <li><a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">Introducing GPT-Live</a></li>
+  </ol>
+  <div class="callout warning"><strong>Фінальна перевірка</strong>OpenAI може змінювати тарифи, квоти, назви моделей, інтерфейси та регіональні обмеження. Перед робочим упровадженням перевірте функцію в реальному обліковому записі й прочитайте актуальну офіційну сторінку.</div>
+  <a class="backtop" href="#uk-scope">Нагору</a>
+</section>
+<div class="footer">OpenAI Europe Guide · 14 July 2026</div></article></main></div><script>window.meta={"fr": {"name": "Français", "flag": "FR", "title": "Guide OpenAI — nouve
