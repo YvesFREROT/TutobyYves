@@ -1,0 +1,79 @@
+rt, la feuille de calcul et la présentation dans les formats demandés.</div>
+    <div class="step"><strong>Réviser.</strong> Demander une passe de conformité, une passe de cohérence des chiffres et une passe de lisibilité exécutive.</div>
+    <div class="step"><strong>Planifier.</strong> Créer une tâche mensuelle qui recherche les nouveaux fichiers et notifie uniquement lorsque toutes les sources sont disponibles.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Prompt maître Work</div><pre>Tu es responsable du reporting mensuel. Avant d’agir, présente un plan, les sources que tu utiliseras et les validations nécessaires. Ensuite :
+1) rapproche les chiffres des fichiers et apps autorisés ;
+2) signale toute incohérence ;
+3) crée un classeur avec des calculs traçables ;
+4) rédige une note exécutive de 6 pages ;
+5) crée une présentation de 10 diapositives ;
+6) réalise un contrôle croisé final.
+Ne modifie ni ne publie aucune source sans mon approbation.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">16. Tâches planifiées et Sites</h2>
+  <p>Les tâches planifiées permettent une exécution unique, récurrente ou conditionnelle, ainsi que la surveillance de changements. Elles sont gérées depuis la page Scheduled sur le web et le mobile. Les limites dépendent du plan ; les tâches ne prennent pas en charge les conversations vocales ni les GPTs.</p>
+  <div class="prompt"><div class="prompt-title">Exemple de surveillance</div><pre>Chaque matin ouvré, vérifie les nouveaux éléments dans les sources autorisées du projet. Préviens-moi seulement si un KPI dépasse son seuil, si une échéance est en retard ou si une décision a été modifiée. Dans la notification, indique la source, l’impact et l’action recommandée.</pre></div>
+  <div class="callout danger"><strong>ChatGPT Sites en Europe</strong>La bêta Sites n’est pas disponible dans l’EEE au lancement. Vérifier la page officielle pour la Suisse, le Royaume-Uni et les autres régions européennes avant de concevoir un processus qui en dépend.</div>
+</section>
+
+<div class="part"><div class="roman">III</div><h2>Univers ChatGPT Codex</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">17. Codex dans la nouvelle application ChatGPT</h2>
+  <p>Codex devient un mode de la nouvelle application desktop ChatGPT sur macOS et Windows. Les utilisateurs de l’ancienne app Codex peuvent la mettre à jour et conserver leurs projets, réglages et workflows. Codex peut rester la vue par défaut.</p>
+  <div class="callout"><strong>Positionnement</strong>Codex est l’agent spécialisé pour écrire, relire et livrer du code. Work convient aux fichiers et workflows métier ; Codex est le bon choix dès qu’il faut travailler dans un dépôt, exécuter des commandes ou examiner des diffs.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">18. Nouveautés Codex du 9 juillet</h2>
+  <ul>
+    <li><strong>Édition directe :</strong> modifier Markdown et code dans l’app, sélectionner un contenu et demander une révision ciblée.</li>
+    <li><strong>Annotations en ligne :</strong> commenter précisément une sélection ou une partie d’un diff.</li>
+    <li><strong>Revue de pull request :</strong> afficher les PR GitHub et les retours de revue dans le panneau latéral, à côté du diff.</li>
+    <li><strong>Multi-dépôts :</strong> travailler avec plusieurs repositories dans un même projet.</li>
+    <li><strong>Computer Use plus rapide :</strong> vitesse améliorée avec GPT-5.6.</li>
+    <li><strong>Suivi plus lisible :</strong> activité et progression de la tâche mieux affichées.</li>
+    <li><strong>Gestion des plugins :</strong> déplacée dans les Réglages.</li>
+    <li><strong>Remote :</strong> fiabilité mobile améliorée et correction du rendu vidéo pour les projets SSH.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">19. Modèles GPT-5.6 dans Codex</h2>
+  <p>Codex est inclus dans les plans ChatGPT, y compris Free et Go, avec des limites différentes. GPT-5.6 Terra est disponible pour Free et Go ; Sol, Terra et Luna sont disponibles pour Plus, Pro, Business et Enterprise selon la documentation actuelle. Les tâches Codex, Work, Excel et Workspace Agents peuvent partager un même pool d’usage agentique et de crédits lorsque ces fonctions sont disponibles.</p>
+  <div class="table-wrap"><table><thead><tr><th>Modèle</th><th>Profil</th><th>Plans indiqués</th><th>Usage conseillé</th></tr></thead><tbody>
+    <tr><td>Terra</td><td>Équilibre capacité / vitesse / coût.</td><td>Free, Go et plans payants.</td><td>Corrections courantes, tests, scripts et exploration.</td></tr>
+    <tr><td>Luna</td><td>Rapide et économique.</td><td>Plus, Pro, Business, Enterprise.</td><td>Sous-tâches, transformations simples et volumes élevés.</td></tr>
+    <tr><td>Sol</td><td>Capacité maximale.</td><td>Plus, Pro, Business, Enterprise.</td><td>Architecture, refactorings complexes, enquêtes longues et multi-dépôts.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">20. Tutoriel Codex — corriger une régression multi-dépôts</h2>
+  <p class="lead">Cas d’usage : une modification de l’API a cassé le parcours de paiement dans le front-end. Le projet comprend un dépôt front, un dépôt API et un dépôt de tests end-to-end.</p>
+  <div class="steps">
+    <div class="step">Ouvrir la nouvelle application ChatGPT et sélectionner Codex.</div>
+    <div class="step">Créer un projet et ajouter les trois dépôts ou dossiers concernés.</div>
+    <div class="step">Demander d’abord une analyse sans modification : reproduction, hypothèses, fichiers impliqués et plan de test.</div>
+    <div class="step">Valider le plan, puis autoriser les modifications dans une branche ou un worktree isolé.</div>
+    <div class="step">Demander l’exécution des tests ciblés, puis de la suite complète pertinente.</div>
+    <div class="step">Relire les diffs dans l’app, ajouter des annotations et demander des révisions ciblées.</div>
+    <div class="step">Ouvrir ou examiner la pull request dans le panneau latéral et intégrer les retours de revue.</div>
+    <div class="step">Vérifier le résumé final : cause racine, changements, tests, risques résiduels et rollback.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Analyse sans modification</div><pre>Analyse la régression du paiement entre les dépôts frontend, api et e2e. Ne modifie rien pour l’instant. Reproduis le problème si possible, identifie la cause racine, liste les fichiers concernés, propose un correctif minimal et un plan de tests. Indique les commandes que tu souhaites exécuter et les autorisations nécessaires.</pre></div>
+  <div class="prompt"><div class="prompt-title">Implémentation contrôlée</div><pre>Applique le correctif validé dans un worktree isolé. Conserve la compatibilité descendante, ajoute un test de non-régression et exécute les tests ciblés. Arrête-toi avant tout push ou création de pull request et présente-moi le diff, les résultats de tests et les risques restants.</pre></div>
+  <div class="prompt"><div class="prompt-title">Revue</div><pre>Relis ce diff comme un reviewer senior. Vérifie les erreurs de concurrence, les cas limites, la sécurité des entrées, les migrations implicites et la couverture de tests. Ajoute des annotations ligne par ligne uniquement quand une action concrète est nécessaire.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">21. Accès distant, CLI et restrictions européennes</h2>
+  <ul>
+    <li><strong>Desktop :</strong> mode Codex complet avec fichiers locaux, dépôts, terminaux et outils de développement.</li>
+    <li><strong>CLI :</strong> client en ligne de commande ; les versions 0.144.2 et 0.144.3 ont été publiées le 13 juillet.</li>
+    <li><strong>Extension IDE :</strong> intégration dans l’environnement de développement.</li>
+    <li><strong>Web Codex :</strong> surface distincte accessible avec le compte ChatGPT.</li>
+    <li><strong>Mobile :</strong> Codex n’est pas un mode sélectionnable ; l’onglet Re
