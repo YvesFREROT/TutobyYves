@@ -1,0 +1,74 @@
+loy sau ștergerea datelor.</pre></div>
+</section>
+
+<div class="part"><div class="roman">IV</div><h2>Guvernanță și implementare</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">17. Controale administrative și checklist european</h2>
+  <p>Disponibilitatea este determinată nu numai de țară și abonament, ci și de permisiunile workspace-ului, roluri, controale de date, conexiuni de aplicații și versiuni ale clientului.</p>
+  <ul class="checklist">
+    <li>Inventariați planurile, țările, tipurile de workspace și rolurile administrative.</li>
+    <li>Confirmați funcțiile reale într-un cont de test pentru fiecare țară țintă.</li>
+    <li>Actualizați aplicația desktop pe dispozitivele macOS și Windows gestionate.</li>
+    <li>Definiți ce echipe folosesc Chat, Work sau Codex.</li>
+    <li>Revizuiți permisiunile pluginurilor și aplicațiilor conectate după principiul privilegiului minim.</li>
+    <li>Documentați aprobările pentru trimitere, publicare, ștergere, push și deploy.</li>
+    <li>Separați explicit fluxurile Work cloud și locale.</li>
+    <li>Nu depindeți de Sites sau Record &amp; Replay fără confirmare la nivel de țară.</li>
+    <li>Exportați informațiile Atlas necesare înainte de 9 august 2026.</li>
+    <li>Revizuiți lunar notele oficiale, deoarece denumirile, limitele și disponibilitatea regională se pot modifica.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">18. Prompt universal, arbore de decizie și surse oficiale</h2>
+  <div class="prompt"><div class="prompt-title">Structură universală</div><pre>Obiectiv: [rezultatul necesar]
+Context: [situație, public, decizie]
+Surse autorizate: [fișiere, aplicații, site-uri]
+Constrângeri: [format, ton, termen, elemente imuabile]
+Metodă: începe cu un plan și pune numai întrebările blocante
+Controale: verifică calculele, citează sursele și semnalează incertitudinile
+Permisiuni: cere aprobare înaintea oricărei acțiuni externe sau ireversibile
+Livrabil: [răspuns, document, tabel, prezentare, diff, PR, notificare]</pre></div>
+  <h3>Ce mod trebuie deschis?</h3>
+  <div class="decision"><div>Întrebare, sinteză sau analiză scurtă?</div><div>Chat</div></div>
+  <div class="decision"><div>Fișier business finalizat sau flux lung, în mai mulți pași?</div><div>Work</div></div>
+  <div class="decision"><div>Depozit, terminal, teste sau revizuire de cod?</div><div>Codex</div></div>
+  <div class="decision"><div>Verificare repetată sau alertă condiționată?</div><div>Sarcină programată</div></div>
+  <div class="decision"><div>Site găzduit necesar în Europa?</div><div>Verificați mai întâi țara; Sites nu este disponibil în SEE la lansare.</div></div>
+  <h3>Surse oficiale OpenAI</h3>
+  <ol class="sources">
+    <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT Release Notes</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001354" target="_blank" rel="noopener">GPT-5.6 in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="noopener">ChatGPT Work and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001276-moving-to-the-new-chatgpt-desktop-app" target="_blank" rel="noopener">Moving to the new ChatGPT desktop app</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001256-plugins-in-codex" target="_blank" rel="noopener">Plugins in ChatGPT and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt" target="_blank" rel="noopener">Skills in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/10291617-tasks-in-chatgpt" target="_blank" rel="noopener">Scheduled Tasks in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001278-creating-and-editing-documents-spreadsheets-and-presentations-with-chatgpt-work" target="_blank" rel="noopener">Creating and editing files with ChatGPT Work</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites" target="_blank" rel="noopener">Creating and managing ChatGPT Sites</a></li>
+    <li><a href="https://developers.openai.com/codex/changelog" target="_blank" rel="noopener">Codex changelog</a></li>
+    <li><a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener">Using Codex with your ChatGPT plan</a></li>
+    <li><a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">Introducing GPT-Live</a></li>
+  </ol>
+  <div class="callout warning"><strong>Verificare finală</strong>OpenAI poate schimba planurile, cotele, numele modelelor, interfețele și restricțiile regionale. Verificați funcția în contul real și consultați pagina oficială curentă înainte de implementarea operațională.</div>
+  <a class="backtop" href="#ro-scope">Sus</a>
+</section>
+<div class="footer">OpenAI Europe Guide · 14 July 2026</div></article><article data-lang="pl"><header class="hero"><div class="eyebrow">OPENAI · EUROPE · 10 JULY 2026+</div><h1>Przewodnik OpenAI — nowości dostępne w Europie od 10 lipca 2026 r.</h1><div class="subtitle">ChatGPT Chat, ChatGPT Work i ChatGPT Codex: dostępność, działanie i praktyczne samouczki</div><div class="updated">Stan informacji: 14 lipca 2026 r. (Europe/Paris)</div><div class="universe-grid"><div class="universe-card"><strong>Chat</strong><span>Rozmowa, wyszukiwanie i szybka pomoc</span></div><div class="universe-card"><strong>Work</strong><span>Materiały wynikowe, analiza i długie zadania</span></div><div class="universe-card"><strong>Codex</strong><span>Kod, repozytoria, terminal i przegląd</span></div></div></header><section class="section" id="pl-scope">
+  <h2 data-toc="1">1. Zakres, data i metoda weryfikacji</h2>
+  <p class="lead">Przewodnik obejmuje oficjalne aktualizacje OpenAI ogłoszone od 9 do 14 lipca 2026 r., które mogły pojawić się na kontach europejskich od 10 lipca wskutek stopniowego wdrażania.</p>
+  <div class="callout"><strong>Jak czytać daty</strong>OpenAI zwykle podaje datę ogłoszenia, a następnie uruchamia funkcję zależnie od planu, powierzchni produktu, konta i regionu. Europa nie jest jedną strefą wdrożeniową. Gdy dokumentacja oficjalna to rozróżnia, przewodnik osobno traktuje Europejski Obszar Gospodarczy (EOG), Unię Europejską, Wielką Brytanię, Szwajcarię i pozostałe obsługiwane kraje europejskie.</div>
+  <p>Główny pakiet ogłoszono 9 lipca: ChatGPT Work, zunifikowaną aplikację komputerową, GPT-5.6, Katalog wtyczek oraz kilka zmian w Codex. Globalne wdrożenie trwające jeden lub kilka dni może wyjaśniać dostępność w Europie od 10 lipca.</p>
+  <div class="callout warning"><strong>Zasada włączenia</strong>Funkcja znajduje się w przewodniku, jeśli została oficjalnie ogłoszona w dniach 9–14 lipca i jest globalna, wyraźnie dostępna w EOG albo istotna dla użytkowników europejskich. Wyłączenia regionalne są zachowane i oznaczone.</div>
+  <p class="small">Prompty i procedury są przykładami przygotowanymi do tego samouczka, a nie cytatami z OpenAI.</p>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">2. Zmiany strukturalne</h2>
+  <ul>
+    <li><strong>Jedna aplikacja komputerowa:</strong> Chat, Work i Codex są dostępne razem na macOS i Windows.</li>
+    <li><strong>Trzy różne tryby pracy:</strong> Chat do szybkiej rozmowy, Work do gotowych materiałów biznesowych, Codex do tworzenia oprogramowania.</li>
+    <li><strong>Nowe poziomy rozumowania:</strong> GPT-5.6 Sol obsługuje poziomy Medium, High i Extra High na uprawnionych planach.</li>
+    <li><strong>Wielokrotnego użytku przepływy:</strong> Katalog wtyczek zastępuje Katalog aplikacji i może łączyć Skills, aplikacje oraz szablony aplikacji.</li>
+    <li><strong>Wykonywanie agentowe:</strong> Work i Codex mogą realizować wieloetapowe zadania, prosić o zatwierdzenia i kontynuować dłuższe operacje.</li>
+    <li><strong>Jawne ograniczenia europejskie:</strong> Sites i Record &amp; Replay nie są dostępne we wsz
