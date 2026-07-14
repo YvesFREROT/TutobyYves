@@ -1,0 +1,72 @@
+>
+  <div class="steps">
+    <div class="step"><strong>Open the repositories.</strong> Add the frontend, API and shared library folders to one Codex task.</div>
+    <div class="step"><strong>Analyse without editing.</strong> Ask Codex to reproduce the failure, map dependencies and identify the likely root cause.</div>
+    <div class="step"><strong>Define safety boundaries.</strong> State which files may change, which commands are allowed and which actions require approval.</div>
+    <div class="step"><strong>Create isolated branches.</strong> Use a dedicated branch or worktree per repository.</div>
+    <div class="step"><strong>Implement the smallest compatible fix.</strong> Preserve public interfaces unless the evidence requires a coordinated change.</div>
+    <div class="step"><strong>Test across repositories.</strong> Run unit, integration, contract and regression tests and compare before/after behaviour.</div>
+    <div class="step"><strong>Review the diff.</strong> Ask for a security, performance and backward-compatibility review.</div>
+    <div class="step"><strong>Stop before publishing.</strong> Require human approval before push, pull request, deployment or destructive command.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Analysis-only prompt</div><pre>Analyse the checkout regression across the frontend, API and shared-library repositories. Do not modify files yet. Reproduce the issue, identify the root cause, list affected interfaces, propose the smallest compatible fix and define the test plan. Separate evidence from hypotheses.</pre></div>
+  <div class="prompt"><div class="prompt-title">Implementation prompt after approval</div><pre>Apply the approved fix in isolated branches. You may edit only the listed files and run the approved test commands. Show progress and every meaningful diff. Stop and ask before installing new dependencies, changing public APIs, pushing, opening a pull request, deploying or deleting data.</pre></div>
+</section>
+
+<div class="part"><div class="roman">IV</div><h2>Governance and deployment</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">17. Administrator controls and European deployment checklist</h2>
+  <p>Availability is governed not only by country and plan, but also by workspace permissions, roles, data controls, app connections and client versions.</p>
+  <ul class="checklist">
+    <li>Inventory plans, countries, workspace types and administrator roles.</li>
+    <li>Confirm the real feature set in a test account for each target country.</li>
+    <li>Update the desktop application on managed macOS and Windows devices.</li>
+    <li>Define which teams should use Chat, Work or Codex.</li>
+    <li>Review plugin and connected-app permissions using least privilege.</li>
+    <li>Document approval gates for sending, publishing, deleting, pushing and deploying.</li>
+    <li>Separate cloud and local Work workflows explicitly.</li>
+    <li>Do not depend on Sites or Record &amp; Replay without country-level confirmation.</li>
+    <li>Export required Atlas information before 9 August 2026.</li>
+    <li>Review official release notes monthly because names, limits and regional availability can change.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">18. Universal prompt, decision tree and official sources</h2>
+  <div class="prompt"><div class="prompt-title">Universal structure</div><pre>Objective: [required outcome]
+Context: [situation, audience, decision]
+Authorised sources: [files, apps, websites]
+Constraints: [format, tone, deadline, immutable elements]
+Method: start with a plan and ask only blocking questions
+Checks: verify calculations, cite sources and flag uncertainty
+Permissions: request approval before every external or irreversible action
+Deliverable: [answer, document, spreadsheet, deck, diff, PR, notification]</pre></div>
+  <h3>Which mode should you open?</h3>
+  <div class="decision"><div>Question, synthesis or short analysis?</div><div>Chat</div></div>
+  <div class="decision"><div>Finished business file or long multi-step workflow?</div><div>Work</div></div>
+  <div class="decision"><div>Repository, terminal, tests or code review?</div><div>Codex</div></div>
+  <div class="decision"><div>Repeated check or condition-based alert?</div><div>Scheduled Task</div></div>
+  <div class="decision"><div>Hosted site required in Europe?</div><div>Check country availability first; Sites is not available in the EEA at launch.</div></div>
+  <h3>Official OpenAI sources</h3>
+  <ol class="sources">
+    <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT Release Notes</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001354" target="_blank" rel="noopener">GPT-5.6 in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="noopener">ChatGPT Work and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001276-moving-to-the-new-chatgpt-desktop-app" target="_blank" rel="noopener">Moving to the new ChatGPT desktop app</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001256-plugins-in-codex" target="_blank" rel="noopener">Plugins in ChatGPT and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt" target="_blank" rel="noopener">Skills in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/10291617-tasks-in-chatgpt" target="_blank" rel="noopener">Scheduled Tasks in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001278-creating-and-editing-documents-spreadsheets-and-presentations-with-chatgpt-work" target="_blank" rel="noopener">Creating and editing files with ChatGPT Work</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites" target="_blank" rel="noopener">Creating and managing ChatGPT Sites</a></li>
+    <li><a href="https://developers.openai.com/codex/changelog" target="_blank" rel="noopener">Codex changelog</a></li>
+    <li><a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener">Using Codex with your ChatGPT plan</a></li>
+    <li><a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">Introducing GPT-Live</a></li>
+  </ol>
+  <div class="callout warning"><strong>Final check</strong>OpenAI can change plans, quotas, model names, surfaces and regional restrictions. Verify the feature in the actual account and read the current official page before operational deployment.</div>
+  <a class="backtop" href="#en-scope">Back to top</a>
+</section>
+<div class="footer">OpenAI Europe Guide · 14 July 2026</div></article><article data-lang="ro"><header class="hero"><div class="eyebrow">OPENAI · EUROPE · 10 JULY 2026+</div><h1>Ghid OpenAI — noutăți disponibile în Europa începând cu 10 iulie 2026</h1><div class="subtitle">ChatGPT Chat, ChatGPT Work și ChatGPT Codex: disponibilitate, funcționare și tutoriale practice</div><div class="updated">Informații actualizate la 14 iulie 2026 (Europe/Paris)</div><div class="universe-grid"><div class="universe-card"><strong>Chat</strong><span>Conversație, cercetare și asistență rapidă</span></div><div class="universe-card"><strong>Work</strong><span>Livrabile, analiză și sarcini de durată</span></div><div class="universe-card"><strong>Codex</strong><span>Cod, depozite, terminal și revizuire</span></div></div></header><section class="section" id="ro-scope">
+  <h2 data-toc="1">1. Domeniu, dată și metodă de verificare</h2>
+  <p class="lead">Acest ghid acoperă actualizările oficiale OpenAI anunțate între 9 și 14 iulie 2026, care au putut deveni vizibile în conturile europene începând cu 10 iulie, ca urmare a lansărilor progresive.</p>
+  <div class="callout"><strong>Cum se interpretează datele</strong>OpenAI publică de obicei o dată a anunțului, apoi activează funcția în func
