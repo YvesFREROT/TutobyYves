@@ -1,0 +1,89 @@
+access</th><th>Main limitation</th></tr></thead><tbody>
+    <tr><td>Web / mobile</td><td>Cloud</td><td>Attachments, projects and connected apps.</td><td>No direct access to files on the computer.</td></tr>
+    <tr><td>Desktop Work</td><td>Local plus authorised services</td><td>Local folders, files, desktop apps and integrated browser context.</td><td>Local Work threads and files remain on that machine at launch.</td></tr>
+    <tr><td>Scheduled Tasks</td><td>Cloud</td><td>One-off, recurring or monitoring tasks.</td><td>Managed from the Scheduled page on web/mobile, not desktop Work.</td></tr>
+  </tbody></table></div>
+  <div class="callout warning"><strong>Cloud/local separation</strong>Cloud Work conversations do not appear in desktop Work at launch, and desktop Work threads do not automatically sync to the cloud. Choose the execution surface before starting a long project.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">11. Create documents, spreadsheets and presentations</h2>
+  <div class="steps">
+    <div class="step">Describe the final file, its audience and decision purpose.</div>
+    <div class="step">Attach approved sources or connect only the required app.</div>
+    <div class="step">Specify the output format and destination.</div>
+    <div class="step">State what must not change: formulas, structure, branding, tone, sheet order or slide sequence.</div>
+    <div class="step">Ask for source traceability and quality checks.</div>
+    <div class="step">Review and approve before sharing or external action.</div>
+  </div>
+  <p>Work can create or edit Google Docs, Sheets and Slides when the corresponding Google Workspace app is enabled. On desktop, Excel can be opened directly through Codex and the ChatGPT for Excel add-in. PowerPoint is not part of the Work desktop flow at launch.</p>
+  <div class="prompt"><div class="prompt-title">Executive report</div><pre>Using the attached sales workbook, pipeline export and team comments, create a six-page executive report. Include an executive summary, KPIs, variance versus budget, causes, risks, decisions required and action plan. Preserve workbook formulas, cite every material number to its source file and add a methodology appendix.</pre></div>
+  <div class="prompt"><div class="prompt-title">Presentation</div><pre>Convert the approved report into a ten-slide leadership presentation. Use the attached template as the visual reference, keep the sequence finding → causes → options → decision, limit each slide to one central idea, and add speaker notes.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">12. Work tutorial — monthly reporting workflow</h2>
+  <p class="lead">Use case: consolidate monthly sales, pipeline, customer feedback and incidents, then produce a checked workbook, management memo and presentation.</p>
+  <div class="steps">
+    <div class="step"><strong>Prepare context.</strong> Create a dedicated project, add approved templates and connect only required sources.</div>
+    <div class="step"><strong>Define acceptance criteria.</strong> Specify audience, deadline, KPI definitions, tolerances and mandatory checks.</div>
+    <div class="step"><strong>Request a plan first.</strong> Ask Work to show its source list, proposed method and blocking questions before creating files.</div>
+    <div class="step"><strong>Reconcile data.</strong> Require duplicate detection, unexplained variances, missing periods and a reconciliation table.</div>
+    <div class="step"><strong>Generate outputs.</strong> Produce the workbook, memo and slides using the validated figures.</div>
+    <div class="step"><strong>Run three reviews.</strong> Check numerical consistency, source traceability and executive readability.</div>
+    <div class="step"><strong>Schedule the next cycle.</strong> Create a monthly task that alerts only when every required source is available.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Master Work prompt</div><pre>You are responsible for monthly reporting. Before acting, present the plan, source list and required approvals. Then:
+1. reconcile figures from authorised files and apps;
+2. flag every inconsistency or missing period;
+3. create a traceable workbook;
+4. write a six-page executive memo;
+5. create a ten-slide presentation;
+6. perform a final cross-check.
+Do not modify, publish or send any source without my explicit approval.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">13. Scheduled Tasks and Sites</h2>
+  <h3>Scheduled Tasks</h3>
+  <p>The Scheduled page on web and mobile supports one-off, recurring and monitoring tasks. Limits vary by plan. Voice and custom GPTs are not supported in scheduled tasks.</p>
+  <div class="prompt"><div class="prompt-title">Monitoring task</div><pre>Every business day, check the authorised support dashboard. Notify me only if critical incidents exceed three, the oldest unresolved incident is more than 24 hours old, or SLA compliance falls below 97%. Include evidence, impact and the recommended action. If no condition is met, do not notify me.</pre></div>
+  <h3>ChatGPT Sites</h3>
+  <p>Sites can turn Work output into a hosted site in eligible regions. At launch, public publishing or the expanded rollout is unavailable in the EEA, and official documentation should be checked separately for the UK and Switzerland. Treat Sites as unavailable until it is visible in the target workspace and country.</p>
+</section>
+
+<div class="part"><div class="roman">III</div><h2>ChatGPT Codex</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">14. Codex in the unified desktop app</h2>
+  <p class="lead">Codex is the software-engineering environment for repository analysis, code modification, command execution, testing and review. From 9 July it is integrated into the unified ChatGPT desktop application.</p>
+  <ul>
+    <li>Direct editing of Markdown and code files.</li>
+    <li>Inline annotations for targeted feedback.</li>
+    <li>A GitHub pull-request review sidebar.</li>
+    <li>Multi-repository work in one task.</li>
+    <li>Faster Computer Use and clearer progress reporting.</li>
+    <li>Plugin management in settings.</li>
+    <li>Improved mobile Remote reliability and video handling.</li>
+  </ul>
+  <div class="callout"><strong>Surface rule</strong>Codex is not selected as a mode on web or mobile. The full environment runs on desktop, CLI or IDE; supported desktop tasks can appear in the mobile Remote tab.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">15. Models, interfaces and European restrictions</h2>
+  <div class="table-wrap"><table><thead><tr><th>Model tier</th><th>Typical use</th><th>Indicative plan availability</th></tr></thead><tbody>
+    <tr><td>Terra</td><td>Routine code tasks, navigation and modest edits.</td><td>Free/Go and paid plans, subject to limits.</td></tr>
+    <tr><td>Sol</td><td>Complex implementation, debugging and multi-step work.</td><td>Plus, Pro, Business and Enterprise.</td></tr>
+    <tr><td>Luna</td><td>Alternative balance for eligible advanced workflows.</td><td>Plus, Pro, Business and Enterprise.</td></tr>
+  </tbody></table></div>
+  <ul>
+    <li><strong>Desktop:</strong> visual project workspace, files, terminals, review and Computer Use.</li>
+    <li><strong>CLI:</strong> terminal-first use, scripting and automation. Version 0.144.2 corrected a Guardian auto-review prompting regression.</li>
+    <li><strong>IDE:</strong> development inside the editor with repository context.</li>
+    <li><strong>Mobile Remote:</strong> monitor and interact with supported tasks started on desktop.</li>
+  </ul>
+  <div class="callout warning"><strong>Record &amp; Replay</strong>This Computer Use feature is initially unavailable in the EU, UK and Switzerland. Do not build a mandatory European workflow around it until the official region list changes.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">16. Codex tutorial — fix a multi-repository regression safely</h2>
