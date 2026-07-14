@@ -1,0 +1,82 @@
+Oddziel fakty, założenia i oceny.</pre></div>
+  <div class="prompt"><div class="prompt-title">Kontrola krytyczna</div><pre>Działaj jako krytyczny recenzent. Wskaż trzy najsłabsze elementy rekomendacji, zbuduj wiarygodny scenariusz, w którym inna opcja jest lepsza, i wymień kontrole wymagane przed zatwierdzeniem.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">8. Katalog wtyczek i przepływy wielokrotnego użytku</h2>
+  <p>Katalog wtyczek zastępuje Katalog aplikacji jako miejsce odkrywania przepływów pracy w ChatGPT i Codex. Wtyczka może łączyć Skills, połączone aplikacje i szablony. Istniejące połączenia aplikacji nie są automatycznie usuwane.</p>
+  <div class="steps">
+    <div class="step">Otwórz Plugins z paska bocznego lub Settings &gt; Plugins.</div>
+    <div class="step">Przeczytaj opis możliwości, dostępu do danych, wymaganych połączeń i ograniczeń administracyjnych.</div>
+    <div class="step">Połącz tylko niezbędne usługi.</div>
+    <div class="step">Wywołaj wtyczkę wzmianką @ lub menu +, zależnie od powierzchni.</div>
+    <div class="step">Wymagaj wyraźnej zgody przed wysłaniem, publikacją, usunięciem albo zmianą danych zewnętrznych.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Przykład z wtyczką komunikatora</div><pre>@Slack, znajdź wiadomości z kanału projektu od poniedziałku. Podsumuj wyłącznie decyzje, blokery, właścicieli i daty. Cytuj wiadomości źródłowe. Nie publikuj ani nie zmieniaj niczego w Slack bez mojej wyraźnej zgody.</pre></div>
+  <div class="callout"><strong>Skill a wtyczka</strong>Skill zawiera instrukcje, przykłady i czasem kod dla spójnego procesu. Wtyczka jest szerszym pakietem, który może obejmować kilka Skills, aplikacje i szablony.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">9. WhatsApp, Voice, czaty grupowe i Atlas</h2>
+  <h3>WhatsApp w EOG</h3>
+  <p>Od 13 lipca ChatGPT stopniowo wraca do WhatsApp w EOG przez zweryfikowany kontakt 1-800-CHATGPT (+1-800-242-8478). Obsługiwane są tekst, obrazy, notatki głosowe i prośby o tworzenie obrazów. Powiązanie konta ChatGPT jest opcjonalne i może zwiększyć limity.</p>
+  <div class="prompt"><div class="prompt-title">Przykład WhatsApp</div><pre>To zdjęcie tablicy ze spotkania. Przepisz decyzje, pogrupuj działania według właściciela i przygotuj wiadomość podsumowującą do 120 słów. Oznacz nieczytelne miejsca zamiast zgadywać.</pre></div>
+  <h3>Inne zmiany w Chat</h3>
+  <ul>
+    <li><strong>GPT-Live-1 Voice:</strong> lepsze przerywanie i bardziej naturalny dialog na uprawnionych planach konsumenckich. Brak przy starcie w Work, Codex, Business, Enterprise i Edu; brak wideo i udostępniania ekranu.</li>
+    <li><strong>Czaty grupowe:</strong> po 9 lipca nie można tworzyć, konwertować ani dołączać do nowych grup. Istniejące działają przejściowo i mogą stać się tylko do odczytu.</li>
+    <li><strong>Atlas:</strong> wycofanie zaplanowano na 9 sierpnia 2026 r. Zakładki, karty i historia przeglądarki nie migrują automatycznie.</li>
+  </ul>
+</section>
+
+<div class="part"><div class="roman">II</div><h2>ChatGPT Work</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">10. Czym jest Work i gdzie działa</h2>
+  <p class="lead">ChatGPT Work jest przeznaczony do długich, uporządkowanych zadań kończących się użytecznym materiałem: researchem, analizą, dokumentem, arkuszem, prezentacją lub raportem.</p>
+  <div class="table-wrap"><table><thead><tr><th>Powierzchnia</th><th>Wykonanie</th><th>Dostęp</th><th>Główne ograniczenie</th></tr></thead><tbody>
+    <tr><td>Web / mobile</td><td>Chmura</td><td>Załączniki, projekty i połączone aplikacje.</td><td>Brak bezpośredniego dostępu do plików komputera.</td></tr>
+    <tr><td>Work desktop</td><td>Lokalnie plus autoryzowane usługi</td><td>Lokalne foldery, pliki, aplikacje desktop i zintegrowany kontekst przeglądarki.</td><td>Lokalne wątki Work i pliki pozostają na danym komputerze przy starcie.</td></tr>
+    <tr><td>Zadania zaplanowane</td><td>Chmura</td><td>Zadania jednorazowe, cykliczne lub monitorujące.</td><td>Zarządzanie na stronie Scheduled w web/mobile, nie w Work desktop.</td></tr>
+  </tbody></table></div>
+  <div class="callout warning"><strong>Rozdział chmura/lokalnie</strong>Rozmowy Work z chmury nie pojawiają się w Work desktop przy starcie, a wątki desktop nie synchronizują się automatycznie do chmury. Powierzchnię wybierz przed rozpoczęciem długiego projektu.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">11. Tworzenie dokumentów, arkuszy i prezentacji</h2>
+  <div class="steps">
+    <div class="step">Opisz plik końcowy, odbiorcę i decyzję, którą ma wspierać.</div>
+    <div class="step">Dołącz zatwierdzone źródła albo połącz wyłącznie potrzebną aplikację.</div>
+    <div class="step">Określ format wyjściowy i miejsce docelowe.</div>
+    <div class="step">Wskaż elementy niezmienne: formuły, strukturę, identyfikację, ton, kolejność arkuszy lub slajdów.</div>
+    <div class="step">Wymagaj śledzenia źródeł i kontroli jakości.</div>
+    <div class="step">Przejrzyj i zatwierdź przed udostępnieniem.</div>
+  </div>
+  <p>Work może tworzyć lub edytować Google Docs, Sheets i Slides po włączeniu odpowiedniej aplikacji Google Workspace. Na desktop Excel można otworzyć bezpośrednio przez Codex i dodatek ChatGPT for Excel. PowerPoint nie jest częścią przepływu Work desktop przy starcie.</p>
+  <div class="prompt"><div class="prompt-title">Raport zarządczy</div><pre>Na podstawie załączonego skoroszytu sprzedaży, eksportu pipeline i komentarzy zespołu utwórz sześciostronicowy raport zarządczy. Uwzględnij podsumowanie, KPI, odchylenie od budżetu, przyczyny, ryzyka, wymagane decyzje i plan działania. Zachowaj formuły, podaj źródło każdej istotnej liczby i dodaj aneks metodologiczny.</pre></div>
+  <div class="prompt"><div class="prompt-title">Prezentacja</div><pre>Przekształć zatwierdzony raport w dziesięcioslajdową prezentację dla kierownictwa. Użyj załączonego szablonu jako wzorca wizualnego, zachowaj kolejność ustalenie → przyczyny → opcje → decyzja, ogranicz każdy slajd do jednej idei i dodaj notatki prowadzącego.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">12. Samouczek Work — miesięczny raport</h2>
+  <p class="lead">Przypadek: comiesięczna konsolidacja sprzedaży, pipeline, opinii klientów i incydentów, a następnie utworzenie sprawdzonego skoroszytu, notatki zarządczej i prezentacji.</p>
+  <div class="steps">
+    <div class="step"><strong>Przygotuj kontekst.</strong> Utwórz projekt, dodaj zatwierdzone szablony i połącz tylko wymagane źródła.</div>
+    <div class="step"><strong>Zdefiniuj kryteria odbioru.</strong> Określ odbiorcę, termin, definicje KPI, tolerancje i obowiązkowe kontrole.</div>
+    <div class="step"><strong>Najpierw poproś o plan.</strong> Work ma pokazać listę źródeł, metodę i pytania blokujące przed tworzeniem plików.</div>
+    <div class="step"><strong>Uzgodnij dane.</strong> Wymagaj wykrycia duplikatów, niewyjaśnionych różnic, brakujących okresów i tabeli uzgodnieniowej.</div>
+    <div class="step"><strong>Wygeneruj materiały.</strong> Utwórz skoroszyt, notatkę i slajdy na podstawie zwalidowanych liczb.</div>
+    <div class="step"><strong>Wykonaj trzy przeglądy.</strong> Spójność liczbowa, śledzenie źródeł i czytelność zarządcza.</div>
+    <div class="step"><strong>Zaplanuj kolejny cykl.</strong> Utwórz zadanie miesięczne, które alarmuje dopiero po dostępności wszystkich źródeł.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Główny prompt Work</div><pre>Odpowiadasz za raport miesięczny. Przed działaniem pokaż plan, listę źródeł i wymagane zatwierdzenia. Następnie:
+1. uzgodnij liczby z autoryzowanych plików i aplikacji;
+2. oznacz każdą niespójność i brakujący okres;
+3. utwórz możliwy do prześledzenia skoroszyt;
+4. napisz sześciostronicową notatkę zarządczą;
+5. utwórz dziesięcioslajdową prezentację;
+6. wykonaj końcową kontrolę krzyżową.
+Nie zmieniaj, nie publikuj ani nie wysyłaj źródeł bez mojej wyraźnej zgody.</pre></div>
+</section>
+
+<
