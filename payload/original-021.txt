@@ -1,0 +1,81 @@
+ень модели</th><th>Типичное применение</th><th>Ориентировочная доступность</th></tr></thead><tbody>
+    <tr><td>Terra</td><td>Обычные задачи с кодом, навигация и умеренные изменения.</td><td>Free/Go и платные тарифы с лимитами.</td></tr>
+    <tr><td>Sol</td><td>Сложная реализация, отладка и многошаговая работа.</td><td>Plus, Pro, Business и Enterprise.</td></tr>
+    <tr><td>Luna</td><td>Альтернативный баланс для подходящих сложных процессов.</td><td>Plus, Pro, Business и Enterprise.</td></tr>
+  </tbody></table></div>
+  <ul>
+    <li><strong>Desktop:</strong> визуальное пространство проекта, файлы, терминалы, ревью и Computer Use.</li>
+    <li><strong>CLI:</strong> работа из терминала, скрипты и автоматизация. Версия 0.144.2 исправила регрессию промпта Guardian auto-review.</li>
+    <li><strong>IDE:</strong> разработка в редакторе с контекстом репозитория.</li>
+    <li><strong>Mobile Remote:</strong> мониторинг и взаимодействие с поддерживаемыми задачами, запущенными на desktop.</li>
+  </ul>
+  <div class="callout warning"><strong>Record &amp; Replay</strong>Эта функция Computer Use изначально недоступна в ЕС, Великобритании и Швейцарии. Не делайте ее обязательной частью европейского процесса до изменения официального списка регионов.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">16. Учебный сценарий Codex — безопасное исправление регрессии в нескольких репозиториях</h2>
+  <div class="steps">
+    <div class="step"><strong>Откройте репозитории.</strong> Добавьте папки frontend, API и общей библиотеки в одну задачу Codex.</div>
+    <div class="step"><strong>Анализируйте без изменений.</strong> Попросите воспроизвести ошибку, построить карту зависимостей и определить вероятную причину.</div>
+    <div class="step"><strong>Задайте границы.</strong> Укажите разрешенные файлы, команды и действия, требующие подтверждения.</div>
+    <div class="step"><strong>Создайте изолированные ветки.</strong> Используйте отдельную ветку или worktree в каждом репозитории.</div>
+    <div class="step"><strong>Внесите минимальное совместимое исправление.</strong> Сохраняйте публичные интерфейсы, если доказательства не требуют согласованного изменения.</div>
+    <div class="step"><strong>Протестируйте все репозитории.</strong> Запустите unit, integration, contract и regression tests.</div>
+    <div class="step"><strong>Проверьте diff.</strong> Запросите ревью безопасности, производительности и обратной совместимости.</div>
+    <div class="step"><strong>Остановитесь до публикации.</strong> Требуйте подтверждение человека перед push, pull request, deployment или разрушительной командой.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Промпт только для анализа</div><pre>Проанализируй регрессию checkout в репозиториях frontend, API и общей библиотеки. Пока не изменяй файлы. Воспроизведи проблему, найди корневую причину, перечисли затронутые интерфейсы, предложи минимальное совместимое исправление и план тестов. Отдели доказательства от гипотез.</pre></div>
+  <div class="prompt"><div class="prompt-title">Промпт реализации после утверждения</div><pre>Примени утвержденное исправление в изолированных ветках. Можно редактировать только перечисленные файлы и запускать утвержденные тестовые команды. Показывай прогресс и каждый значимый diff. Остановись и спроси перед установкой зависимостей, изменением публичных API, push, созданием pull request, deployment или удалением данных.</pre></div>
+</section>
+
+<div class="part"><div class="roman">IV</div><h2>Управление и внедрение</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">17. Административные настройки и европейский чек-лист</h2>
+  <p>Доступность определяется не только страной и тарифом, но и разрешениями рабочего пространства, ролями, контролями данных, подключениями приложений и версиями клиента.</p>
+  <ul class="checklist">
+    <li>Проведите инвентаризацию тарифов, стран, типов рабочих пространств и административных ролей.</li>
+    <li>Подтвердите фактический набор функций в тестовом аккаунте для каждой целевой страны.</li>
+    <li>Обновите desktop-приложение на управляемых устройствах macOS и Windows.</li>
+    <li>Определите, какие команды используют Chat, Work или Codex.</li>
+    <li>Проверьте разрешения плагинов и подключенных приложений по принципу минимальных привилегий.</li>
+    <li>Зафиксируйте точки утверждения для отправки, публикации, удаления, push и deployment.</li>
+    <li>Явно разделите облачные и локальные процессы Work.</li>
+    <li>Не полагайтесь на Sites или Record &amp; Replay без проверки на уровне страны.</li>
+    <li>Экспортируйте необходимые данные Atlas до 9 августа 2026 года.</li>
+    <li>Ежемесячно проверяйте официальные заметки: названия, лимиты и региональная доступность могут меняться.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">18. Универсальный промпт, дерево решений и официальные источники</h2>
+  <div class="prompt"><div class="prompt-title">Универсальная структура</div><pre>Цель: [нужный результат]
+Контекст: [ситуация, аудитория, решение]
+Разрешенные источники: [файлы, приложения, сайты]
+Ограничения: [формат, тон, срок, неизменяемые элементы]
+Метод: начни с плана и задавай только блокирующие вопросы
+Проверки: проверь расчеты, укажи источники и отметь неопределенность
+Разрешения: запрашивай подтверждение перед каждой внешней или необратимой операцией
+Результат: [ответ, документ, таблица, презентация, diff, PR, уведомление]</pre></div>
+  <h3>Какой режим открыть?</h3>
+  <div class="decision"><div>Вопрос, краткое резюме или короткий анализ?</div><div>Chat</div></div>
+  <div class="decision"><div>Готовый бизнес-файл или длительный многошаговый процесс?</div><div>Work</div></div>
+  <div class="decision"><div>Репозиторий, терминал, тесты или ревью кода?</div><div>Codex</div></div>
+  <div class="decision"><div>Повторяющаяся проверка или условное оповещение?</div><div>Запланированная задача</div></div>
+  <div class="decision"><div>Нужен размещенный сайт в Европе?</div><div>Сначала проверьте страну; Sites недоступен в ЕЭЗ на старте.</div></div>
+  <h3>Официальные источники OpenAI</h3>
+  <ol class="sources">
+    <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT Release Notes</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001354" target="_blank" rel="noopener">GPT-5.6 in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="noopener">ChatGPT Work and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001276-moving-to-the-new-chatgpt-desktop-app" target="_blank" rel="noopener">Moving to the new ChatGPT desktop app</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001256-plugins-in-codex" target="_blank" rel="noopener">Plugins in ChatGPT and Codex</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001066-skills-in-chatgpt" target="_blank" rel="noopener">Skills in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/10291617-tasks-in-chatgpt" target="_blank" rel="noopener">Scheduled Tasks in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001278-creating-and-editing-documents-spreadsheets-and-presentations-with-chatgpt-work" target="_blank" rel="noopener">Creating and editing files with ChatGPT Work</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites" target="_blank" rel="noopener">Creating and managing ChatGPT Sites</a></li>
+    <li><a href="https://developers.openai.com/codex/changelog" target="_blank" rel="noopener">Codex changelog</a></li>
+    <li><a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank" rel="noopener">Using Codex with your ChatGPT plan</a></li>
+    <li><a href="https://openai.com/index/introducing-gpt-live/" target="_blank" rel="noopener">Introducing GPT-Live</a></li>
+  </ol>
+  <div class="call
