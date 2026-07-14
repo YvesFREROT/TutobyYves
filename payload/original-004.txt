@@ -1,0 +1,74 @@
+, des apps connectées à des données ou actions, et des modèles d’apps. Les connexions existantes ne sont pas supprimées.</p>
+  <ul>
+    <li><strong>Découverte :</strong> ouvrir Plugins dans la barre latérale ou dans Réglages &gt; Plugins.</li>
+    <li><strong>Connexion :</strong> sélectionner un plugin, lire ses capacités et exigences, puis connecter l’app sous-jacente lorsque nécessaire.</li>
+    <li><strong>Invocation :</strong> utiliser une mention @ dans le prompt ou le menu + puis « More ».</li>
+    <li><strong>Gouvernance :</strong> les permissions, le rôle, les validations et les restrictions géographiques continuent de s’appliquer.</li>
+  </ul>
+  <div class="prompt"><div class="prompt-title">Exemple avec un plugin de messagerie</div><pre>@Slack, retrouve les échanges du canal projet depuis lundi. Résume uniquement les décisions, les blocages, les propriétaires et les dates. Cite les messages sources et ne publie rien dans Slack sans me demander une validation explicite.</pre></div>
+  <div class="callout"><strong>Skills et plugins ne sont pas synonymes</strong>Une Skill contient des instructions, exemples et éventuellement du code pour exécuter un workflow de façon cohérente. Un plugin est un paquet plus large pouvant inclure plusieurs Skills, apps et modèles d’apps.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">10. ChatGPT sur WhatsApp dans l’EEE</h2>
+  <p>Depuis le 13 juillet, ChatGPT est de nouveau disponible sur WhatsApp dans l’Espace économique européen. Il est possible d’écrire au contact vérifié 1-800-CHATGPT (+1-800-242-8478) sans compte ChatGPT. Les utilisateurs peuvent envoyer du texte, des images et des notes vocales, et demander la création d’images. Lier un compte est facultatif et peut augmenter les limites.</p>
+  <ul>
+    <li>La disponibilité dépend du code pays associé au numéro WhatsApp.</li>
+    <li>La fonction peut apparaître progressivement.</li>
+    <li>Des quotas d’usage s’appliquent.</li>
+    <li>Ne pas envoyer de données confidentielles sans vérifier les règles internes et les conditions applicables.</li>
+  </ul>
+  <div class="prompt"><div class="prompt-title">Exemple WhatsApp</div><pre>Voici une photo du tableau blanc de notre réunion. Transcris les décisions, sépare les actions par responsable et prépare un message de suivi de moins de 120 mots. Signale les zones illisibles au lieu de les inventer.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">11. Autres changements Chat</h2>
+  <ul>
+    <li><strong>Fin des nouveaux chats de groupe :</strong> depuis le 9 juillet, il n’est plus possible d’en créer ou d’en rejoindre de nouveaux. Les historiques existants restent accessibles et deviennent progressivement en lecture seule.</li>
+    <li><strong>Retrait d’Atlas :</strong> Atlas doit cesser de fonctionner le 9 août 2026. Les données de navigateur ne migrent pas automatiquement ; la nouvelle app desktop devient la surface privilégiée pour le travail agentique dans le navigateur.</li>
+    <li><strong>GPT-Live-1 :</strong> annoncé le 8 juillet, il améliore les interruptions et le dialogue vocal sur les plans grand public. Il n’est pas disponible dans Work, Codex ni les espaces Business, Enterprise ou Edu au lancement.</li>
+  </ul>
+</section>
+
+<div class="part"><div class="roman">II</div><h2>Univers ChatGPT Work</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">12. Ce que Work apporte de nouveau</h2>
+  <p class="lead">ChatGPT Work est conçu pour les tâches longues et structurées : rechercher, analyser, travailler avec des apps et fichiers, puis produire des documents, feuilles de calcul, présentations et rapports.</p>
+  <p>L’utilisateur peut suivre l’avancement, répondre aux questions, changer la direction et approuver les actions importantes.</p>
+  <div class="callout"><strong>Différence essentielle avec Chat</strong>Chat répond principalement dans la conversation. Work vise un résultat fini : fichier, analyse structurée, présentation, rapport ou workflow récurrent.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">13. Où Work s’exécute</h2>
+  <div class="table-wrap"><table><thead><tr><th>Surface</th><th>Exécution</th><th>Accès possible</th><th>Limite principale</th></tr></thead><tbody>
+    <tr><td>Web / mobile</td><td>Cloud</td><td>Fichiers joints, projets, apps connectées.</td><td>Pas d’accès direct aux fichiers locaux de l’ordinateur.</td></tr>
+    <tr><td>Application desktop</td><td>Local + services autorisés</td><td>Dossiers locaux, fichiers, applications de bureau, navigateur intégré.</td><td>Les threads Work locaux restent sur la machine au lancement.</td></tr>
+    <tr><td>Tâches planifiées</td><td>Cloud</td><td>Exécution unique, récurrente, déclenchée ou surveillance.</td><td>Gestion depuis Scheduled sur web/mobile, pas dans l’app desktop.</td></tr>
+  </tbody></table></div>
+  <div class="callout warning"><strong>Séparation cloud / local</strong>Les conversations Work créées dans le cloud ne sont pas visibles dans Work desktop, et les threads desktop ainsi que les fichiers locaux restent sur l’ordinateur. Organiser les projets en tenant compte de cette séparation.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">14. Créer des documents, feuilles et présentations</h2>
+  <div class="steps">
+    <div class="step">Ouvrir Work et décrire le fichier à produire ainsi que son usage final.</div>
+    <div class="step">Joindre les sources ou connecter l’app nécessaire.</div>
+    <div class="step">Préciser le format de sortie et l’emplacement de création.</div>
+    <div class="step">Lister ce qui doit rester inchangé : formules, structure, charte, ton, ordre des diapositives ou tableaux.</div>
+    <div class="step">Contrôler le fichier, demander les corrections et valider avant diffusion.</div>
+  </div>
+  <p>Work peut créer ou modifier des Google Docs, Sheets et Slides lorsque l’app Google Workspace correspondante est activée. Sur desktop, Microsoft Excel est pris en charge via l’add-in ChatGPT for Excel ; le flux Work desktop n’inclut pas PowerPoint au lancement.</p>
+  <div class="prompt"><div class="prompt-title">Créer un rapport de direction</div><pre>À partir des fichiers joints « ventes_juillet.xlsx », « pipeline.csv » et « commentaires_equipes.docx », crée un rapport de direction de 6 pages. Structure : résumé exécutif, KPI, écarts vs budget, causes, risques, décisions demandées et plan d’action. Conserve les formules du classeur, cite chaque chiffre avec son fichier source et ajoute une annexe méthodologique.</pre></div>
+  <div class="prompt"><div class="prompt-title">Produire une présentation</div><pre>Transforme le rapport validé en une présentation de 10 diapositives pour un comité de direction. Utilise le modèle joint comme référence visuelle, conserve l’ordre « constat → causes → options → décision », limite chaque diapositive à une idée et ajoute les notes orateur.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">15. Tutoriel Work — reporting mensuel automatisé</h2>
+  <p class="lead">Cas d’usage : consolider chaque mois les ventes, le pipeline, les retours clients et les incidents, puis produire une note, un tableur contrôlé et une présentation.</p>
+  <div class="steps">
+    <div class="step"><strong>Préparer le contexte.</strong> Créer un projet dédié, joindre les modèles approuvés, ajouter les instructions permanentes et connecter uniquement les apps nécessaires.</div>
+    <div class="step"><strong>Définir le résultat.</strong> Décrire les livrables, le public, la date, les critères de qualité et les contrôles attendus.</div>
+    <div class="step"><strong>Lancer l’analyse.</strong> Demander d’abord un plan, une liste de sources et les questions bloquantes avant toute création de fichier.</div>
+    <div class="step"><strong>Contrôler les données.</strong> Exiger une table de rapprochement, les écarts inexpliqués, les doublons et les hypothèses.</div>
+    <div class="step"><strong>Générer les livrables.</strong> Créer le rappo
