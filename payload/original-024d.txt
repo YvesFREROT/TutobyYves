@@ -1,0 +1,21 @@
+  <tr><td>Luna</td><td>Альтернативний баланс для відповідних складних процесів.</td><td>Plus, Pro, Business і Enterprise.</td></tr>
+  </tbody></table></div>
+  <ul>
+    <li><strong>Desktop:</strong> візуальний простір проєкту, файли, термінали, рев’ю та Computer Use.</li>
+    <li><strong>CLI:</strong> робота з термінала, скрипти й автоматизація. Версія 0.144.2 виправила регресію промпта Guardian auto-review.</li>
+    <li><strong>IDE:</strong> розробка в редакторі з контекстом репозиторію.</li>
+    <li><strong>Mobile Remote:</strong> моніторинг і взаємодія з підтримуваними завданнями, запущеними на desktop.</li>
+  </ul>
+  <div class="callout warning"><strong>Record &amp; Replay</strong>Ця функція Computer Use спочатку недоступна в ЄС, Великій Британії та Швейцарії. Не робіть її обов’язковою частиною європейського процесу до зміни офіційного списку регіонів.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">16. Навчальний сценарій Codex — безпечне виправлення регресії в кількох репозиторіях</h2>
+  <div class="steps">
+    <div class="step"><strong>Відкрийте репозиторії.</strong> Додайте папки frontend, API та спільної бібліотеки до одного завдання Codex.</div>
+    <div class="step"><strong>Аналізуйте без змін.</strong> Попросіть відтворити помилку, побудувати карту залежностей і визначити ймовірну причину.</div>
+    <div class="step"><strong>Задайте межі.</strong> Укажіть дозволені файли, команди та дії, які потребують підтвердження.</div>
+    <div class="step"><strong>Створіть ізольовані гілки.</strong> Використовуйте окрему гілку або worktree в кожному репозиторії.</div>
+    <div class="step"><strong>Внесіть мінімальне сумісне виправлення.</strong> Зберігайте публічні інтерфейси, якщо докази не вимагають узгодженої зміни.</div>
+    <div class="step"><strong>Протестуйте всі репозиторії.</strong> Запустіть unit, integration, contract і regression tests.</div>
+    <div class="step"><strong>Перевірте diff.</strong> Запросіть рев’ю безпеки, продуктивності та з
