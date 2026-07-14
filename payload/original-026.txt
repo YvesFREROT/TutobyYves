@@ -1,0 +1,9 @@
+струкції", "updated": "Інформація актуальна станом на 14 липня 2026 року (Europe/Paris)", "contents": "Зміст", "print": "Друк / PDF", "top": "Нагору"}};
+const buttons=[...document.querySelectorAll('.lang-btn')];
+const articles=[...document.querySelectorAll('article[data-lang]')];
+function slug(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9а-яёіїєґ]+/gi,'-').replace(/^-|-$/g,'')}
+function buildToc(lang){const a=document.querySelector(`article[data-lang="${lang}"]`);const toc=document.querySelector('#toc');toc.innerHTML='';a.querySelectorAll('h2[data-toc="1"]').forEach((h,i)=>{if(!h.id)h.id=`${lang}-${slug(h.textContent)}-${i}`;const x=document.createElement('a');x.href='#'+h.id;x.textContent=h.textContent;toc.appendChild(x)});}
+function setLang(lang){articles.forEach(a=>a.classList.toggle('active',a.dataset.lang===lang));buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));document.documentElement.lang=lang;document.title=window.meta[lang].title;document.querySelector('#contents-label').textContent=window.meta[lang].contents;document.querySelector('#print-btn').textContent=window.meta[lang].print;buildToc(lang);try{localStorage.setItem('openai-guide-lang',lang)}catch(e){};window.scrollTo({top:0,behavior:'instant'})}
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));document.querySelector('#print-btn').addEventListener('click',()=>window.print());
+let saved=null;try{saved=localStorage.getItem('openai-guide-lang')}catch(e){};const detected=(navigator.language||'fr').slice(0,2);setLang(saved||(window.meta[detected]?detected:'fr'));
+</script></body></html>
