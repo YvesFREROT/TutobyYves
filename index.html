@@ -13,7 +13,7 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Ro
 <script>
 (async()=>{
   const status=document.getElementById('status');
-  const version='original-f8427892-fix3-20260714';
+  const version='original-f8427892-fix4-20260714';
   const expected='f842789242721b5be6a93a34f34ca3f97ebfb5598edd51b038e6468bb04513af';
   const parts=[
     ['payload/original-001.txt','text'],['payload/original-002.txt','text'],['payload/original-003.txt','text'],
@@ -26,9 +26,10 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Ro
     ['payload/original-020a.txt','text'],['payload/original-020b.txt','text'],['payload/original-021.txt','text'],
     ['payload/original-022a.txt','text'],['payload/original-022b.txt','text'],['payload/original-023a.txt','text'],
     ['payload/original-023b1.txt','text'],['payload/original-023b2.b64','base64'],['payload/original-024a.txt','text'],
-    ['payload/original-024b.txt','text'],['payload/fix-024c.b64','base64'],['payload/original-024d.txt','text'],
-    ['payload/original-025a.txt','text'],['payload/original-025b.txt','text'],['payload/original-025c.txt','text'],
-    ['payload/original-025d.txt','text'],['payload/fix-026.b64','base64']
+    ['payload/original-024b.txt','text'],['payload/fix-024c-a.b64','base64'],['payload/fix-024c-b.b64','base64'],
+    ['payload/fix-024c-c.b64','base64'],['payload/fix-024c-d.b64','base64'],['payload/fix-024c1.b64','base64'],
+    ['payload/original-024d.txt','text'],['payload/original-025a.txt','text'],['payload/original-025b.txt','text'],
+    ['payload/original-025c.txt','text'],['payload/original-025d.txt','text'],['payload/fix-026.b64','base64']
   ];
   function decodeBase64Utf8(value){
     const binary=atob(value.replace(/\s+/g,''));
@@ -43,7 +44,8 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Ro
       const [file,encoding]=parts[i];
       const response=await fetch(`${file}?v=${version}`,{cache:'no-store'});
       if(!response.ok)throw new Error(`Fichier manquant : ${file} (${response.status})`);
-      const value=await response.text();
+      let value=await response.text();
+      if(file==='payload/fix-024c-b.b64') value=value.replace('0LXQtNCw0LPQvtCy','0LXQtNCw0LPRg9Cy');
       chunks.push(encoding==='base64'?decodeBase64Utf8(value):value);
     }
     status.textContent='Vérification de l’intégrité…';
