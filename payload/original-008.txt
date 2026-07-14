@@ -1,0 +1,81 @@
+mp; Replay</td><td>Current documentation</td><td>Initially unavailable in the EU, UK and Switzerland.</td><td>Eligible Codex macOS users; requires Computer Use.</td><td>Verify the current regional status before designing training around it.</td></tr>
+    <tr><td>GPT-Live-1 Voice</td><td>8 July</td><td>Gradual consumer rollout in supported European accounts.</td><td>Consumer web/mobile.</td><td>Not available in Work, Codex, Business, Enterprise or Edu at launch; no video or screen sharing.</td></tr>
+  </tbody></table></div>
+  <div class="callout warning"><strong>Europe is not one entitlement</strong>Always verify country, plan, workspace role, client version and administrator settings in the actual account.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">5. Timeline</h2>
+  <div class="table-wrap"><table><thead><tr><th>Date</th><th>Universe</th><th>Update</th></tr></thead><tbody>
+    <tr><td>8 July</td><td>Chat</td><td>GPT-Live-1 begins rolling out for consumer Voice experiences.</td></tr>
+    <tr><td>9 July</td><td>Chat</td><td>GPT-5.6, Plugin Directory, end of new group chats and Atlas retirement notice.</td></tr>
+    <tr><td>9 July</td><td>Work</td><td>ChatGPT Work, long-running tasks and the unified desktop app announced.</td></tr>
+    <tr><td>9 July</td><td>Codex</td><td>Codex joins the desktop app with direct editing, annotations, PR review and multi-repository work.</td></tr>
+    <tr><td>10 July onward</td><td>Europe</td><td>Likely visibility window for staged deployments announced on 9 July.</td></tr>
+    <tr><td>13 July</td><td>Chat</td><td>ChatGPT returns to WhatsApp in the EEA.</td></tr>
+    <tr><td>13 July</td><td>Codex</td><td>CLI 0.144.2 restores the previous Guardian auto-review policy after a prompting regression.</td></tr>
+  </tbody></table></div>
+</section>
+
+<div class="part"><div class="roman">I</div><h2>ChatGPT Chat</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">6. Chat and GPT-5.6</h2>
+  <p class="lead">Chat remains the immediate conversational space for questions, synthesis, research, brainstorming and rapid drafting. On desktop it now sits next to Work and Codex in the same application.</p>
+  <p>GPT-5.6 Sol powers Medium and High reasoning, and Extra High where the plan allows it. The practical difference is the amount of deliberation used before answering.</p>
+  <div class="table-wrap"><table><thead><tr><th>Level</th><th>Use it for</th><th>Trade-off</th></tr></thead><tbody>
+    <tr><td>Instant / default</td><td>Simple questions, rewriting, quick summaries and first-pass exploration.</td><td>Fastest, but less suitable for multi-constraint decisions.</td></tr>
+    <tr><td>Medium</td><td>Comparisons, structured recommendations and moderate analysis.</td><td>More time and usage than Instant.</td></tr>
+    <tr><td>High</td><td>Complex decisions, deep document analysis and demanding planning.</td><td>Slower; still requires human verification.</td></tr>
+    <tr><td>Extra High</td><td>Highest-effort reasoning on eligible plans.</td><td>Plan-dependent and the most resource intensive.</td></tr>
+  </tbody></table></div>
+  <div class="callout"><strong>Recommended method</strong>Use Instant for orientation, Medium or High for the decision, then ask for a contradictory review. A higher reasoning level does not remove the need to check sources, numbers and assumptions.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">7. Chat tutorial — produce a reliable recommendation</h2>
+  <div class="steps">
+    <div class="step">Open Chat on web, mobile or the unified desktop app.</div>
+    <div class="step">Attach the approved source files and state which external sources are allowed.</div>
+    <div class="step">Ask for a comparison grid before requesting the recommendation.</div>
+    <div class="step">Require facts, assumptions and judgments to be separated.</div>
+    <div class="step">Run a second pass that tries to invalidate the first answer.</div>
+    <div class="step">Verify the critical figures and citations before reusing the output.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Main prompt</div><pre>I am attaching three supplier proposals. Compare them on total cost, delivery time, contractual risk, reversibility, security requirements and hidden costs. Cite the source for each material statement. End with a recommendation, confidence level and the missing information that could change the decision. Separate facts, assumptions and judgments.</pre></div>
+  <div class="prompt"><div class="prompt-title">Adversarial check</div><pre>Act as a critical reviewer. Identify the three weakest parts of the recommendation, build a plausible scenario in which another option becomes preferable, and list the human checks required before approval.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">8. Plugin Directory and reusable workflows</h2>
+  <p>The Plugin Directory replaces the App Directory as the discovery point for reusable workflows in ChatGPT and Codex. A plugin can combine Skills, connected apps and app templates. Existing app connections are not automatically removed.</p>
+  <div class="steps">
+    <div class="step">Open Plugins from the sidebar or Settings &gt; Plugins.</div>
+    <div class="step">Read the plugin’s capabilities, data access, required app connections and administrative restrictions.</div>
+    <div class="step">Connect only the underlying services that are necessary.</div>
+    <div class="step">Invoke the plugin with an @ mention or the + menu, depending on the surface.</div>
+    <div class="step">Require explicit approval before sending, publishing, deleting or modifying external data.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Example with a messaging plugin</div><pre>@Slack, find project-channel messages since Monday. Summarise only decisions, blockers, owners and dates. Cite the source messages. Do not post or modify anything in Slack without my explicit approval.</pre></div>
+  <div class="callout"><strong>Skill versus plugin</strong>A Skill contains instructions, examples and sometimes code for a consistent workflow. A plugin is a broader package that may include several Skills, apps and templates.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">9. WhatsApp, Voice, group chats and Atlas</h2>
+  <h3>WhatsApp in the EEA</h3>
+  <p>From 13 July, ChatGPT is again available progressively on WhatsApp in the EEA through the verified 1-800-CHATGPT contact (+1-800-242-8478). Text, images, voice notes and image-generation requests are supported. Linking a ChatGPT account is optional and may raise limits.</p>
+  <div class="prompt"><div class="prompt-title">WhatsApp example</div><pre>This is a photo of our meeting whiteboard. Transcribe the decisions, group actions by owner and draft a follow-up message under 120 words. Mark unreadable areas instead of guessing.</pre></div>
+  <h3>Other Chat changes</h3>
+  <ul>
+    <li><strong>GPT-Live-1 Voice:</strong> improved interruptions and more natural dialogue for eligible consumer plans. It does not launch in Work, Codex, Business, Enterprise or Edu, and does not include video or screen sharing.</li>
+    <li><strong>Group chats:</strong> no new group chats can be created, converted or joined after 9 July. Existing ones continue temporarily and may become read-only.</li>
+    <li><strong>Atlas:</strong> retirement is scheduled for 9 August 2026. Browser bookmarks, tabs and history do not automatically migrate, so export or document what must be retained.</li>
+  </ul>
+</section>
+
+<div class="part"><div class="roman">II</div><h2>ChatGPT Work</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">10. What Work is and where it runs</h2>
+  <p class="lead">ChatGPT Work is designed for long, structured tasks that end in a usable deliverable: research, analysis, documents, spreadsheets, presentations and reports.</p>
+  <div class="table-wrap"><table><thead><tr><th>Surface</th><th>Execution</th><th>Can 
