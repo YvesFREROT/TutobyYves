@@ -1,0 +1,28 @@
+</li>
+    <li>Не покладайтеся на Sites або Record &amp; Replay без перевірки на рівні країни.</li>
+    <li>Експортуйте потрібні дані Atlas до 9 серпня 2026 року.</li>
+    <li>Щомісяця перевіряйте офіційні нотатки: назви, ліміти й регіональна доступність можуть змінюватися.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">18. Універсальний промпт, дерево рішень та офіційні джерела</h2>
+  <div class="prompt"><div class="prompt-title">Універсальна структура</div><pre>Мета: [потрібний результат]
+Контекст: [ситуація, аудиторія, рішення]
+Дозволені джерела: [файли, застосунки, сайти]
+Обмеження: [формат, тон, строк, незмінні елементи]
+Метод: почни з плану й став лише блокувальні запитання
+Перевірки: перевір розрахунки, укажи джерела й познач невизначеність
+Дозволи: запитуй підтвердження перед кожною зовнішньою або незворотною операцією
+Результат: [відповідь, документ, таблиця, презентація, diff, PR, повідомлення]</pre></div>
+  <h3>Який режим відкрити?</h3>
+  <div class="decision"><div>Запитання, коротке резюме або невеликий аналіз?</div><div>Chat</div></div>
+  <div class="decision"><div>Готовий бізнес-файл або тривалий багатокроковий процес?</div><div>Work</div></div>
+  <div class="decision"><div>Репозиторій, термінал, тести або рев’ю коду?</div><div>Codex</div></div>
+  <div class="decision"><div>Повторювана перевірка або умовне сповіщення?</div><div>Заплановане завдання</div></div>
+  <div class="decision"><div>Потрібен розміщений сайт у Європі?</div><div>Спочатку перевірте країну; Sites недоступний у ЄЕЗ на старті.</div></div>
+  <h3>Офіційні джерела OpenAI</h3>
+  <ol class="sources">
+    <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT Release Notes</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001354" target="_blank" rel="noopener">GPT-5.6 in ChatGPT</a></li>
+    <li><a href="https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="
