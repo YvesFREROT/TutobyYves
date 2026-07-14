@@ -1,0 +1,69 @@
+>
+  <div class="callout"><strong>Règle rapide</strong>Si la demande se termine par une réponse, commencer dans Chat. Si elle se termine par un livrable métier, choisir Work. Si elle nécessite un dépôt, un terminal ou un diff, choisir Codex.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">4. Disponibilité en Europe au 14 juillet 2026</h2>
+  <div class="table-wrap"><table><thead><tr><th>Fonction</th><th>Annonce</th><th>Situation en Europe</th><th>Plans / surfaces</th><th>Point d’attention</th></tr></thead><tbody>
+    <tr><td>GPT-5.6 Sol dans Chat</td><td>9 juillet</td><td>Oui, déploiement progressif dans les zones européennes prises en charge, dont l’EEE.</td><td>Plus, Pro, Business, Enterprise selon le niveau.</td><td>La fonction peut ne pas être encore visible sur chaque compte.</td></tr>
+    <tr><td>ChatGPT Work</td><td>9 juillet</td><td>Oui, déploiement progressif.</td><td>Plans payants hors Free/Go ; web, mobile, desktop.</td><td>Pro, Pro Lite, Enterprise et Edu d’abord ; Plus et Business ensuite.</td></tr>
+    <tr><td>Nouvelle application desktop</td><td>9 juillet</td><td>Oui, disponibilité mondiale progressive.</td><td>macOS et Windows.</td><td>Peut coexister temporairement avec « ChatGPT Classic ».</td></tr>
+    <tr><td>Répertoire des plugins</td><td>9 juillet</td><td>Oui, sous réserve du plan, du rôle et des restrictions propres à chaque plugin.</td><td>Tous plans ; capacités variables.</td><td>Chaque app sous-jacente peut avoir des règles géographiques distinctes.</td></tr>
+    <tr><td>ChatGPT sur WhatsApp</td><td>13 juillet</td><td>Disponible progressivement dans l’EEE.</td><td>Numéro WhatsApp avec indicatif admissible.</td><td>La disponibilité dépend du code pays et des quotas.</td></tr>
+    <tr><td>ChatGPT Sites</td><td>9 juillet</td><td>Non disponible dans l’EEE au lancement ; vérifier séparément la Suisse et le Royaume-Uni dans la page officielle.</td><td>Plans payants éligibles dans les régions ouvertes.</td><td>Ne pas en dépendre pour un processus européen tant que l’ouverture régionale n’est pas confirmée.</td></tr>
+    <tr><td>Codex dans l’app desktop</td><td>9 juillet</td><td>Oui.</td><td>Inclus dans tous les plans, avec limites variables.</td><td>Codex n’est pas un mode sélectionnable sur web/mobile ; certaines tâches sont accessibles à distance.</td></tr>
+    <tr><td>Record &amp; Replay</td><td>Documentation actuelle</td><td>Non disponible dans l’Union européenne, en Suisse et au Royaume-Uni au lancement.</td><td>Codex macOS, utilisateurs éligibles.</td><td>Vérifier l’évolution de la disponibilité régionale.</td></tr>
+    <tr><td>GPT-Live-1 Voice</td><td>8 juillet</td><td>Disponible progressivement sur les comptes grand public éligibles.</td><td>Web/mobile grand public.</td><td>Non disponible dans Work, Codex, Business, Enterprise ou Edu au lancement.</td></tr>
+  </tbody></table></div>
+  <div class="callout warning"><strong>L’Europe n’est pas une seule zone de déploiement</strong>Une mention « disponible en Europe » doit toujours être vérifiée selon le pays, le plan, le rôle, la version du client et les réglages de l’espace de travail.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">5. Chronologie utile</h2>
+  <div class="table-wrap"><table><thead><tr><th>Date officielle</th><th>Univers</th><th>Événement</th></tr></thead><tbody>
+    <tr><td>8 juillet</td><td>Chat</td><td>GPT-Live-1 pour Voice ; lancement progressif sur les plans grand public.</td></tr>
+    <tr><td>9 juillet</td><td>Chat</td><td>GPT-5.6, Répertoire des plugins, fin des nouveaux groupes, retrait programmé d’Atlas.</td></tr>
+    <tr><td>9 juillet</td><td>Work</td><td>Lancement de ChatGPT Work, des tâches longues et de l’application desktop unifiée.</td></tr>
+    <tr><td>9 juillet</td><td>Codex</td><td>Intégration dans l’application ChatGPT, édition directe, annotations, revue de PR et multi-dépôts.</td></tr>
+    <tr><td>10 juillet</td><td>Europe</td><td>Fenêtre plausible de visibilité des annonces du 9 juillet dans les comptes européens, selon le déploiement progressif.</td></tr>
+    <tr><td>13 juillet</td><td>Chat</td><td>Retour de ChatGPT sur WhatsApp dans l’EEE.</td></tr>
+    <tr><td>13 juillet</td><td>Codex</td><td>CLI 0.144.2 et 0.144.3 : correction d’une régression d’auto-revue et publication technique.</td></tr>
+  </tbody></table></div>
+</section>
+
+<div class="part"><div class="roman">I</div><h2>Univers ChatGPT Chat</h2></div>
+
+<section class="section">
+  <h2 data-toc="1">6. Ce qu’est désormais Chat</h2>
+  <p class="lead">Chat reste l’espace de conversation immédiate : questions, recherche, brainstorming, synthèse et aide rapide.</p>
+  <p>Sur ordinateur, Chat est séparé de Work et Codex. Un bouton « Quick chat » ouvre rapidement une conversation. Les conversations Chat se synchronisent entre le web et la nouvelle application de bureau.</p>
+  <div class="callout"><strong>Quand l’utiliser</strong>Choisir Chat lorsque le résultat peut être obtenu dans une conversation relativement courte et ne nécessite ni exécution prolongée dans plusieurs outils, ni travail direct dans un dépôt logiciel.</div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">7. GPT-5.6 dans Chat</h2>
+  <p>GPT-5.6 Sol est déployé progressivement pour les utilisateurs éligibles dans les zones européennes prises en charge. GPT-5.5 Instant reste le mode rapide par défaut ; GPT-5.6 Sol alimente Medium, High et Extra High, tandis que Sol Pro alimente le niveau Pro.</p>
+  <div class="table-wrap"><table><thead><tr><th>Niveau</th><th>À utiliser pour</th><th>Exemple</th></tr></thead><tbody>
+    <tr><td>Instant</td><td>Réponses quotidiennes rapides.</td><td>Reformuler un message, résumer une page, générer des idées.</td></tr>
+    <tr><td>Medium</td><td>Raisonnement standard.</td><td>Comparer des offres et expliciter les hypothèses.</td></tr>
+    <tr><td>High</td><td>Analyse plus longue.</td><td>Construire un plan de négociation avec plusieurs scénarios.</td></tr>
+    <tr><td>Extra High</td><td>Problèmes complexes.</td><td>Analyser un dossier multidocument et tester plusieurs stratégies.</td></tr>
+    <tr><td>Pro</td><td>Tâches les plus difficiles et longues.</td><td>Audit critique d’un projet stratégique avec contre-arguments.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">8. Tutoriel Chat — produire une recommandation rapide</h2>
+  <div class="steps">
+    <div class="step">Ouvrir Chat sur le web, le mobile ou la nouvelle application de bureau.</div>
+    <div class="step">Choisir Instant pour une première lecture, puis Medium ou High si l’analyse exige plusieurs critères ou scénarios.</div>
+    <div class="step">Joindre les documents utiles et demander explicitement les hypothèses, les limites et les éléments à vérifier.</div>
+    <div class="step">Demander une seconde passe critique avant de réutiliser la recommandation.</div>
+  </div>
+  <div class="prompt"><div class="prompt-title">Prompt de départ</div><pre>Analyse ces trois propositions commerciales. Construis un tableau comparatif sur le prix total, le délai, les risques contractuels, la réversibilité et les coûts cachés. Termine par une recommandation argumentée et indique les informations manquantes qui pourraient changer la décision.</pre><div class="prompt-note">Pour une décision importante, sélectionner Medium ou High et demander une vérification des calculs et des citations.</div></div>
+  <div class="prompt"><div class="prompt-title">Prompt de contrôle</div><pre>Agis maintenant comme un contradicteur. Identifie les trois faiblesses principales de ta recommandation, propose un scénario où une autre option devient préférable et liste les vérifications humaines indispensables avant décision.</pre></div>
+</section>
+
+<section class="section">
+  <h2 data-toc="1">9. Répertoire des plugins</h2>
+  <p>Depuis le 9 juillet, le Répertoire des plugins devient l’entrée principale pour découvrir des workflows dans ChatGPT et Codex. Un plugin peut réunir une ou plusieurs Skills
