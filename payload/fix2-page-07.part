@@ -1,0 +1,14 @@
+
+ };
+ try{
+  if(!('DecompressionStream'in window))throw new Error('Ce navigateur ne prend pas en charge la décompression gzip intégrée. Utilisez une version récente de Chrome, Edge, Firefox ou Safari.');
+  const bg=await fetchEncoded(baseFiles,'Chargement du tutoriel');status.textContent='Vérification de l’archive principale…';if(hex(await crypto.subtle.digest('SHA-256',bg))!==expectedBaseGzip)throw new Error('Échec du contrôle de l’archive principale.');const bb=await ungzip(bg);if(hex(await crypto.subtle.digest('SHA-256',bb))!==expectedBaseHtml)throw new Error('Échec du contrôle du tutoriel original.');
+  const hg=await fetchEncoded(huFiles,'Chargement du hongrois');status.textContent='Vérification de la traduction hongroise…';if(hex(await crypto.subtle.digest('SHA-256',hg))!==expectedHuGzip)throw new Error('Échec du contrôle de l’archive hongroise.');const hb=await ungzip(hg);if(hex(await crypto.subtle.digest('SHA-256',hb))!==expectedHuArticle)throw new Error('Échec du contrôle de la traduction hongroise.');
+  let html=new TextDecoder('utf-8',{fatal:true}).decode(bb);const huArticle=await correct(new TextDecoder('utf-8',{fatal:true}).decode(hb));
+  const oldButton='<button class="lang-btn" data-lang="uk" type="button">UA · Українська</button>',huButton='<button class="lang-btn" data-lang="hu" type="button">HU · Magyar</button>';if(!html.includes(oldButton))throw new Error('Bouton ukrainien introuvable dans le tutoriel source.');html=html.replace(oldButton,oldButton+huButton);
+  const marker='</main></div><script>window.meta=',p=html.lastIndexOf(marker);if(p<0)throw new Error('Point d’insertion de l’article hongrois introuvable.');html=html.slice(0,p)+huArticle+html.slice(p);
+  const needle='};\nconst buttons=',m=html.indexOf(needle,html.indexOf('window.meta='));if(m<0)throw new Error('Métadonnées multilingues introuvables.');html=html.slice(0,m)+', "hu": {"name": "Magyar", "flag": "HU", "title": "OpenAI-útmutató — Európában 2026. július 10. óta elérhető újdonságok", "subtitle": "ChatGPT Chat, ChatGPT Work és ChatGPT Codex: elérhetőség, működés és gyakorlati útmutatók", "updated": "Az információk 2026. július 14-i állapotot tükröznek (Europe/Paris időzóna)", "contents": "Tartalom", "print": "Nyomtatás / PDF", "top": "Vissza az oldal tetejére"}'+html.slice(m);
+  document.open();document.write(html);document.close();
+ }catch(error){status.className='error';status.textContent=error instanceof Error?error.message:String(error)}
+})();
+</script></body></html>
