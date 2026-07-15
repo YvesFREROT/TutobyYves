@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chargement du tutoriel OpenAI — 7 langues</title>
+<script>
+(()=>{
+ const latestVersion='seven-lang-hu-proofread-fix2-20260715';
+ const url=new URL(window.location.href);
+ if(url.searchParams.get('v')!==latestVersion){
+   url.searchParams.set('v',latestVersion);
+   window.location.replace(url.toString());
+ }
+})();
+</script>
+<style>html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f3f5f7;color:#172026}main{min-height:100%;display:grid;place-items:center;padding:24px;box-sizing:border-box}.card{width:min(700px,100%);background:#fff;border:1px solid #dbe1e5;border-radius:18px;padding:28px;box-shadow:0 12px 35px rgba(24,36,42,.1)}h1{font-size:1.45rem;margin:0 0 12px}p{line-height:1.55;margin:8px 0}.status{color:#59646d}.error{color:#9b2c2c;white-space:pre-wrap}</style></head>
+<body><main><section class="card"><h1>Chargement de la version complète…</h1><p>Reconstitution et vérification du tutoriel original avec la version hongroise révisée.</p><p id="status" class="status" aria-live="polite">Préparation des fichiers.</p></section></main>
+<script>
+(async()=>{
+ const status=document.getElementById('status'),version='seven-lang-hu-proofread-fix2-20260715';
+ const baseFiles=Array.from({length:11},(_,i)=>`payload/gzip-${String(i).padStart(2,'0')}.b64`),huFiles=Array.from({length:15},(_,i)=>`payload/hu-small-${String(i).padStart(2,'0')}.b64`);
+ const expectedBaseGzip='07607aaddd378c9e1464274597a7a6c49ecbd7b46ea305f20b421afbf1058675',expectedBaseHtml='f842789242721b5be6a93a34f34ca3f97ebfb5598edd51b038e6468bb04513af',expectedHuGzip='bea614892aa75cb958b01b3f4ed3ad780fe6a268e56f26d2cbf38dea6a6701d2',expectedHuArticle='264d36d4c7a7c2d2efd01759c7b19ffaec785d35ee5693fc5eefe16424f53b19';
+ const patchArchive='H4sIAAAAAAAC/+1dzY8byXX/VxoEAsRIczz8GpLak7ze7K7XjoWsYh+IPRSHNZyebnYz3U3aw5NzyS1AlOSU2xznoEMgQAdDN0L/iP+S/N5HVVdzOKPRrrS73gQYSmyyu+rVq1fv+z3OZp3frm3+9Mto/+d6talNvX8V/eVP/xV9tin3r9b7m7nJo/5p/+wkutr/OUs2VdQ7PYn2r2oT2Wx/W17a+u0LPHy1KPJqf7Ms0k6sQ3Y/4JCz2Vk8jjvdzjffxIPTb+JZ5+kuSvKLolztb86T/as02t9kmVkXtXlyOPrwJPpbTF6s7c+fmTKpfgYQ7zx++Ew38SMWdVTv36Tl/vUut2l7rChZvH2x27/Kzc8Iyt4w7g/jTgcQDk/jYQ8g3zcO3TMaxfjrNIPw+vq6Pt2Z0uaLamfLJK+BoLcvqt3+dRnN7ZXNbF7vb6skWuxv6s0K46cYe/86i6OVuVpE51WxMss4qi3WeZteAL1vMlvH0YVg7LaKyv3tEheRm2Brd7ZOMHpkootNnhJy6hPdOxPldhXZ5XWFp2yFu/h2BoHBx4077GAdmV1IUCmm3b/OoxR3Zwl9qeMl0edm
