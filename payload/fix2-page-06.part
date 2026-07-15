@@ -1,0 +1,32 @@
+placeRange=(root,start,end,text)=>{const ns=nodes(root);let pos=0,sn,en,so,eo;for(const n of ns){const next=pos+n.nodeValue.length;if(!sn&&start>=pos&&start<=next){sn=n;so=start-pos}if(!en&&end>=pos&&end<=next){en=n;eo=end-pos;break}pos=next}if(!sn||!en)throw new Error(`Plage de correction introuvable (${start}–${end}).`);if(sn===en){sn.nodeValue=sn.nodeValue.slice(0,so)+text+sn.nodeValue.slice(eo);return}const si=ns.indexOf(sn),ei=ns.indexOf(en),suffix=en.nodeValue.slice(eo);sn.nodeValue=sn.nodeValue.slice(0,so)+text;for(let i=si+1;i<ei;i++)ns[i].nodeValue='';en.nodeValue=suffix};
+ const correct=async source=>{
+   const patchText=new TextDecoder().decode(await ungzip(fromB64(patchArchive))),patches=JSON.parse(patchText),t=document.createElement('template');
+   t.innerHTML=source;
+   const smallest=(text,contains=false)=>[...t.content.querySelectorAll('*')].filter(e=>{
+     const value=e.textContent||'',match=contains?value.includes(text):value===text;
+     return match&&![...e.children].some(x=>contains?(x.textContent||'').includes(text):(x.textContent||'')===text);
+   });
+   for(const [from,to,ops,line] of patches){
+     let candidates=smallest(from),element=null,offset=0;
+     if(candidates.length===1){element=candidates[0];}
+     else if(candidates.length===0){
+       const already=smallest(to);
+       if(already.length===1)continue;
+       const containing=smallest(from,true).filter(e=>{
+         const value=e.textContent||'',first=value.indexOf(from);
+         return first>=0&&first===value.lastIndexOf(from);
+       });
+       if(containing.length===1){element=containing[0];offset=(element.textContent||'').indexOf(from);}
+       else{
+         const alreadyContained=smallest(to,true).filter(e=>{
+           const value=e.textContent||'',first=value.indexOf(to);
+           return first>=0&&first===value.lastIndexOf(to);
+         });
+         if(alreadyContained.length===1)continue;
+         throw new Error(`Correction hongroise non appliquée à la ligne ${line} (texte source : ${candidates.length}, texte corrigé : ${already.length}, texte inclus : ${containing.length}).`);
+       }
+     }else throw new Error(`Correction hongroise ambiguë à la ligne ${line} (correspondances : ${candidates.length}).`);
+     for(const [start,end,text] of [...ops].reverse())replaceRange(element,offset+start,offset+end,text);
+     if((element.textContent||'').slice(offset,offset+to.length)!==to)throw new Error(`Échec de validation à la ligne ${line}.`);
+   }
+   return t.innerHTML;
