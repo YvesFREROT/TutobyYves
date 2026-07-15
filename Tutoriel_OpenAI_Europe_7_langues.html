@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chargement du tutoriel OpenAI — 7 langues</title>
+<style>html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f3f5f7;color:#172026}main{min-height:100%;display:grid;place-items:center;padding:24px;box-sizing:border-box}.card{width:min(700px,100%);background:#fff;border:1px solid #dbe1e5;border-radius:18px;padding:28px;box-shadow:0 12px 35px rgba(24,36,42,.1)}h1{font-size:1.45rem;margin:0 0 12px}p{line-height:1.55;margin:8px 0}.status{color:#59646d}.error{color:#9b2c2c;white-space:pre-wrap}</style></head>
+<body><main><section class="card"><h1>Chargement de la version complète…</h1><p>Reconstitution et vérification du tutoriel original avec la version hongroise.</p><p id="status" class="status" aria-live="polite">Préparation des fichiers.</p></section></main>
+<script>
+(async()=>{
+ const status=document.getElementById('status');
+ const version='seven-lang-efeaa50c-20260715';
+ const baseFiles=Array.from({length:11},(_,i)=>`payload/gzip-${String(i).padStart(2,'0')}.b64`);
+ const huFiles=Array.from({length:15},(_,i)=>`payload/hu-small-${String(i).padStart(2,'0')}.b64`);
+ const expectedBaseGzip='07607aaddd378c9e1464274597a7a6c49ecbd7b46ea305f20b421afbf1058675';
+ const expectedBaseHtml='f842789242721b5be6a93a34f34ca3f97ebfb5598edd51b038e6468bb04513af';
+ const expectedHuGzip='bea614892aa75cb958b01b3f4ed3ad780fe6a268e56f26d2cbf38dea6a6701d2';
+ const expectedHuArticle='264d36d4c7a7c2d2efd01759c7b19ffaec785d35ee5693fc5eefe16424f53b19';
+ const expectedFinal='efeaa50cd8ea9ad7b65ace14ca6f46acf386832841faef1ad1b6c783287ff099';
+ const hex=buffer=>[...new Uint8Array(buffer)].map(b=>b.toString(16).padStart(2,'0')).join('');
+ const fetchEncoded=async(files,label)=>{
+   const chunks=[];
+   for(let i=0;i<files.length;i++){status.textContent=`${label} ${i+1}/${files.length}…`;const r=await fetch(`${files[i]}?v=${version}`,{cache:'no-store'});if(!r.ok)throw new Error(`Fichier manquant : ${files[i]} (${r.status})`);chunks.push(await r.text());}
+   const binary=atob(chunks.join('').replace(/\s+/g,''));const bytes=new Uint8Array(binary.length);for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);return bytes;
+ };
+ const ungzip=async bytes=>new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+ try{
+   if(!('DecompressionStream' in window))throw new Error('Ce navigateur ne prend pas en charge la décompression gzip intégrée. Utilisez une version récente de Chrome, Edge, Firefox ou Safari.');
+   const baseGzip=await fetchEncoded(baseFiles,'Chargement du tutoriel');
+   status.textContent='Vérification de l’archive principale…';
+   if(hex(await crypto.subtle.digest('SHA-256',baseGzip))!==expectedBaseGzip)throw new Error('Échec du contrôle de l’archive principale.');
+   const baseBuffer=await ungzip(baseGzip);
+   if(hex(await crypto.subtle.digest('SHA-256',baseBuffer))!==expectedBaseHtml)throw new Error('Échec du contrôle du tutoriel original.');
+   const huGzip=await fetchEncoded(huFiles,'Chargement du hongrois');
+   status.textContent='Vérification de la traduction hongroise…';
+   if(hex(await crypto.subtle.digest('SHA-256',huGzip))!==expectedHuGzip)throw new Error('Échec du contrôle de l’archive hongroise.');
+   const huBuffer=await ungzip(huGzip);
+   if(hex(await crypto.subtle.digest('SHA-256',huBuffer))!==expectedHuArticle)throw new Error('Échec du contrôle de la traduction hongroise.');
+   let html=new TextDecoder('utf-8',{fatal:true}).decode(baseBuffer);
+   const huArticle=new TextDecoder('utf-8',{fatal:true}).decode(huBuffer);
+   const oldButton="<button class=\"lang-btn\" data-lang=\"uk\" type=\"button\">UA · Українська</button>";
+   const huButton="<button class=\"lang-btn\" data-lang=\"hu\" type=\"button\">HU · Magyar</button>";
+   if(!html.includes(oldButton))throw new Error('Bouton ukrainien introuvable dans le tutoriel source.');
+   html=html.replace(oldButton,oldButton+huButton);
+   const articleMarker='</main></div><script>window.meta=';
+   const articlePos=html.lastIndexOf(articleMarker);
+   if(articlePos<0)throw new Error('Point d’insertion de l’article hongrois introuvable.');
+   html=html.slice(0,articlePos)+huArticle+html.slice(articlePos);
+   const metaNeedle='};\nconst buttons=';
+   const metaPos=html.indexOf(metaNeedle,html.indexOf('window.meta='));
+   if(metaPos<0)throw new Error('Métadonnées multilingues introuvables.');
+   html=html.slice(0,metaPos)+", \"hu\": {\"name\": \"Magyar\", \"flag\": \"HU\", \"title\": \"OpenAI útmutató — Európában 2026. július 10. óta elérhető újdonságok\", \"subtitle\": \"ChatGPT Chat, ChatGPT Work és ChatGPT Codex: elérhetőség, működés és gyakorlati útmutatók\", \"updated\": \"Az információk állapota: 2026. július 14. (Europe/Paris)\", \"contents\": \"Tartalom\", \"print\": \"Nyomtatás / PDF\", \"top\": \"Vissza az oldal tetejére\"}"+html.slice(metaPos);
+   status.textContent='Vérification du tutoriel à sept langues…';
+   const finalBytes=new TextEncoder().encode(html);
+   const finalHash=hex(await crypto.subtle.digest('SHA-256',finalBytes));
+   if(finalHash!==expectedFinal)throw new Error(`Échec du contrôle final.\nAttendu : ${expectedFinal}\nObtenu : ${finalHash}`);
+   document.open();document.write(html);document.close();
+ }catch(error){status.className='error';status.textContent=error instanceof Error?error.message:String(error);}
+})();
+</script></body></html>
